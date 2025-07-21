@@ -1,0 +1,1766 @@
+[
+    {
+        "expansion": "基本",
+        "name": "地下貯蔵庫"
+    },
+    {
+        "expansion": "基本",
+        "name": "礼拝堂"
+    },
+    {
+        "expansion": "基本",
+        "name": "堀"
+    },
+    {
+        "expansion": "基本",
+        "name": "家臣"
+    },
+    {
+        "expansion": "基本",
+        "name": "工房"
+    },
+    {
+        "expansion": "基本",
+        "name": "商人"
+    },
+    {
+        "expansion": "基本",
+        "name": "前駆者"
+    },
+    {
+        "expansion": "基本",
+        "name": "村"
+    },
+    {
+        "expansion": "基本",
+        "name": "改築"
+    },
+    {
+        "expansion": "基本",
+        "name": "鍛冶屋"
+    },
+    {
+        "expansion": "基本",
+        "name": "金貸し"
+    },
+    {
+        "expansion": "基本",
+        "name": "玉座の間"
+    },
+    {
+        "expansion": "基本",
+        "name": "密猟者"
+    },
+    {
+        "expansion": "基本",
+        "name": "民兵"
+    },
+    {
+        "expansion": "基本",
+        "name": "役人"
+    },
+    {
+        "expansion": "基本",
+        "name": "庭園"
+    },
+    {
+        "expansion": "基本",
+        "name": "市場"
+    },
+    {
+        "expansion": "基本",
+        "name": "衛兵"
+    },
+    {
+        "expansion": "基本",
+        "name": "議事堂"
+    },
+    {
+        "expansion": "基本",
+        "name": "研究所"
+    },
+    {
+        "expansion": "基本",
+        "name": "鉱山"
+    },
+    {
+        "expansion": "基本",
+        "name": "祝祭"
+    },
+    {
+        "expansion": "基本",
+        "name": "書庫"
+    },
+    {
+        "expansion": "基本",
+        "name": "山賊"
+    },
+    {
+        "expansion": "基本",
+        "name": "魔女"
+    },
+    {
+        "expansion": "基本",
+        "name": "職人"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "手先"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "中庭"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "待ち伏せ"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "仮面舞踏会"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "執事"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "願いの井戸"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "貧民街"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "詐欺師"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "隠し通路"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "共謀者"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "鉱山の村"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "男爵"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "鉄工所"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "橋"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "外交官"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "風車"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "改良"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "交易場"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "廷臣"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "パトロール"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "拷問人"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "寵臣"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "身代わり"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "公爵"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "貴族"
+    },
+    {
+        "expansion": "陰謀",
+        "name": "ハーレム"
+    },
+    {
+        "expansion": "海辺",
+        "name": "原住民の村"
+    },
+    {
+        "expansion": "海辺",
+        "name": "停泊所"
+    },
+    {
+        "expansion": "海辺",
+        "name": "灯台"
+    },
+    {
+        "expansion": "海辺",
+        "name": "海図"
+    },
+    {
+        "expansion": "海辺",
+        "name": "倉庫"
+    },
+    {
+        "expansion": "海辺",
+        "name": "密輸人"
+    },
+    {
+        "expansion": "海辺",
+        "name": "見張り"
+    },
+    {
+        "expansion": "海辺",
+        "name": "漁村"
+    },
+    {
+        "expansion": "海辺",
+        "name": "サル"
+    },
+    {
+        "expansion": "海辺",
+        "name": "アストロラーベ"
+    },
+    {
+        "expansion": "海辺",
+        "name": "宝の地図"
+    },
+    {
+        "expansion": "海辺",
+        "name": "引揚水夫"
+    },
+    {
+        "expansion": "海辺",
+        "name": "巾着切り"
+    },
+    {
+        "expansion": "海辺",
+        "name": "潮溜り"
+    },
+    {
+        "expansion": "海辺",
+        "name": "船乗り"
+    },
+    {
+        "expansion": "海辺",
+        "name": "隊商"
+    },
+    {
+        "expansion": "海辺",
+        "name": "封鎖"
+    },
+    {
+        "expansion": "海辺",
+        "name": "島"
+    },
+    {
+        "expansion": "海辺",
+        "name": "バザー"
+    },
+    {
+        "expansion": "海辺",
+        "name": "宝物庫"
+    },
+    {
+        "expansion": "海辺",
+        "name": "前哨地"
+    },
+    {
+        "expansion": "海辺",
+        "name": "策士"
+    },
+    {
+        "expansion": "海辺",
+        "name": "商船"
+    },
+    {
+        "expansion": "海辺",
+        "name": "船着場"
+    },
+    {
+        "expansion": "海辺",
+        "name": "海の魔女"
+    },
+    {
+        "expansion": "海辺",
+        "name": "コルセア"
+    },
+    {
+        "expansion": "海辺",
+        "name": "海賊"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "薬草商"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "弟子"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "変成"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "ブドウ園"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "薬師"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "大学"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "念視の泉"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "錬金術師"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "使い魔"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "賢者の石"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "ゴーレム"
+    },
+    {
+        "expansion": "錬金術",
+        "name": "支配"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "望楼"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "金床"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "記念碑"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "司教"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "労働者の村"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "書記"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "石切場"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "出資"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "ティアラ"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "造幣所"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "都市"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "保管庫"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "有力者"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "山師"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "大衆"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "収集品"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "水晶球"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "軍用金"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "大市場"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "隠し財産"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "拡張"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "宮廷"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "鍛造"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "銀行"
+    },
+    {
+        "expansion": "繁栄",
+        "name": "行商人"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "村落"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "移動動物園"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "店"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "再建"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "魔女娘"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "耕作者"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "狩猟団"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "道化師"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "豊穣の角笛"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "収穫祭"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "渡し守"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "一騎討ち"
+    },
+    {
+        "expansion": "収穫祭",
+        "name": "品評会"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "蝋燭職人"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "装蹄師"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "石工"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "診療所"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "助言者"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "広場"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "伝令官"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "熟練工"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "商人ギルド"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "肉屋"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "パン屋"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "予言者"
+    },
+    {
+        "expansion": "ギルド",
+        "name": "野盗"
+    },
+    {
+        "expansion": "異郷",
+        "name": "岐路"
+    },
+    {
+        "expansion": "異郷",
+        "name": "愚者の黄金"
+    },
+    {
+        "expansion": "異郷",
+        "name": "オアシス"
+    },
+    {
+        "expansion": "異郷",
+        "name": "開発"
+    },
+    {
+        "expansion": "異郷",
+        "name": "画策"
+    },
+    {
+        "expansion": "異郷",
+        "name": "坑道"
+    },
+    {
+        "expansion": "異郷",
+        "name": "番犬"
+    },
+    {
+        "expansion": "異郷",
+        "name": "織工"
+    },
+    {
+        "expansion": "異郷",
+        "name": "香辛料商人"
+    },
+    {
+        "expansion": "異郷",
+        "name": "よろずや"
+    },
+    {
+        "expansion": "異郷",
+        "name": "交易人"
+    },
+    {
+        "expansion": "異郷",
+        "name": "進路"
+    },
+    {
+        "expansion": "異郷",
+        "name": "遊牧民"
+    },
+    {
+        "expansion": "異郷",
+        "name": "大釜"
+    },
+    {
+        "expansion": "異郷",
+        "name": "街道"
+    },
+    {
+        "expansion": "異郷",
+        "name": "厩舎"
+    },
+    {
+        "expansion": "異郷",
+        "name": "狂戦士"
+    },
+    {
+        "expansion": "異郷",
+        "name": "車大工"
+    },
+    {
+        "expansion": "異郷",
+        "name": "スーク"
+    },
+    {
+        "expansion": "異郷",
+        "name": "地図職人"
+    },
+    {
+        "expansion": "異郷",
+        "name": "値切り屋"
+    },
+    {
+        "expansion": "異郷",
+        "name": "宿屋"
+    },
+    {
+        "expansion": "異郷",
+        "name": "辺境伯"
+    },
+    {
+        "expansion": "異郷",
+        "name": "魔女の小屋"
+    },
+    {
+        "expansion": "異郷",
+        "name": "国境の村"
+    },
+    {
+        "expansion": "異郷",
+        "name": "農地"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "救貧院"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "従者"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "浮浪者"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "物乞い"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "隠遁者"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "賢者"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "採集者"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "物置"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "浮浪児"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "青空市場"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "金物商"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "吟遊詩人"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "行進"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "ゴミあさり"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "城塞"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "ネズミ"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "武器庫"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "死の荷車"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "襲撃者"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "封土"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "屑屋"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "山賊の宿営地"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "建て直し"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "地下墓所"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "墓暴き"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "伯爵"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "はみだし者"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "秘術師"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "盗賊"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "略奪"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "狂信者"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "騎士"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "偽造通貨"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "狩場"
+    },
+    {
+        "expansion": "暗黒時代",
+        "name": "祭壇"
+    },
+    {
+        "expansion": "冒険",
+        "name": "倒壊"
+    },
+    {
+        "expansion": "冒険",
+        "name": "鼠取り"
+    },
+    {
+        "expansion": "冒険",
+        "name": "法貨"
+    },
+    {
+        "expansion": "冒険",
+        "name": "地下牢"
+    },
+    {
+        "expansion": "冒険",
+        "name": "道具"
+    },
+    {
+        "expansion": "冒険",
+        "name": "魔除け"
+    },
+    {
+        "expansion": "冒険",
+        "name": "隊商の護衛"
+    },
+    {
+        "expansion": "冒険",
+        "name": "案内人"
+    },
+    {
+        "expansion": "冒険",
+        "name": "カササギ"
+    },
+    {
+        "expansion": "冒険",
+        "name": "使者"
+    },
+    {
+        "expansion": "冒険",
+        "name": "守銭奴"
+    },
+    {
+        "expansion": "冒険",
+        "name": "港町"
+    },
+    {
+        "expansion": "冒険",
+        "name": "山守"
+    },
+    {
+        "expansion": "冒険",
+        "name": "複製"
+    },
+    {
+        "expansion": "冒険",
+        "name": "変容"
+    },
+    {
+        "expansion": "冒険",
+        "name": "失われし都市"
+    },
+    {
+        "expansion": "冒険",
+        "name": "語り部"
+    },
+    {
+        "expansion": "冒険",
+        "name": "工匠"
+    },
+    {
+        "expansion": "冒険",
+        "name": "巨人"
+    },
+    {
+        "expansion": "冒険",
+        "name": "沼の妖婆"
+    },
+    {
+        "expansion": "冒険",
+        "name": "呪いの森"
+    },
+    {
+        "expansion": "冒険",
+        "name": "橋の下のトロル"
+    },
+    {
+        "expansion": "冒険",
+        "name": "御料車"
+    },
+    {
+        "expansion": "冒険",
+        "name": "ワイン商"
+    },
+    {
+        "expansion": "冒険",
+        "name": "遠隔地"
+    },
+    {
+        "expansion": "冒険",
+        "name": "掘出物"
+    },
+    {
+        "expansion": "冒険",
+        "name": "遺物"
+    },
+    {
+        "expansion": "冒険",
+        "name": "雇人"
+    },
+    {
+        "expansion": "冒険",
+        "name": "騎士見習い"
+    },
+    {
+        "expansion": "冒険",
+        "name": "農民"
+    },
+    {
+        "expansion": "帝国",
+        "name": "戦車競走"
+    },
+    {
+        "expansion": "帝国",
+        "name": "農家の市場"
+    },
+    {
+        "expansion": "帝国",
+        "name": "女魔術師"
+    },
+    {
+        "expansion": "帝国",
+        "name": "生贄"
+    },
+    {
+        "expansion": "帝国",
+        "name": "ヴィラ"
+    },
+    {
+        "expansion": "帝国",
+        "name": "神殿"
+    },
+    {
+        "expansion": "帝国",
+        "name": "公共広場"
+    },
+    {
+        "expansion": "帝国",
+        "name": "庭師"
+    },
+    {
+        "expansion": "帝国",
+        "name": "ワイルドハント"
+    },
+    {
+        "expansion": "帝国",
+        "name": "軍団兵"
+    },
+    {
+        "expansion": "帝国",
+        "name": "資料庫"
+    },
+    {
+        "expansion": "帝国",
+        "name": "御守り"
+    },
+    {
+        "expansion": "帝国",
+        "name": "元手"
+    },
+    {
+        "expansion": "帝国",
+        "name": "冠"
+    },
+    {
+        "expansion": "帝国",
+        "name": "技術者"
+    },
+    {
+        "expansion": "帝国",
+        "name": "王室の鍛冶屋"
+    },
+    {
+        "expansion": "帝国",
+        "name": "市街"
+    },
+    {
+        "expansion": "帝国",
+        "name": "大君主"
+    },
+    {
+        "expansion": "帝国",
+        "name": "開拓者"
+    },
+    {
+        "expansion": "帝国",
+        "name": "陣地"
+    },
+    {
+        "expansion": "帝国",
+        "name": "パトリキ"
+    },
+    {
+        "expansion": "帝国",
+        "name": "剣闘士"
+    },
+    {
+        "expansion": "帝国",
+        "name": "投石機"
+    },
+    {
+        "expansion": "帝国",
+        "name": "城"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "ドルイド"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "ピクシー"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "追跡者"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "修道院"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "守護者"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "忠犬"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "愚者"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "レプラコーン"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "秘密の洞窟"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "取り替え子"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "夜警"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "ゴーストタウン"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "詩人"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "恵みの村"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "コンクラーベ"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "ネクロマンサー"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "羊飼い"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "暗躍者"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "墓地"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "悪魔の工房"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "悪魔祓い"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "呪われた村"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "プーカ"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "聖なる木立ち"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "迫害者"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "悲劇のヒーロー"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "人狼"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "吸血鬼"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "納骨堂"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "悪人のアジト"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "カブラー"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "偶像"
+    },
+    {
+        "expansion": "夜想曲",
+        "name": "夜襲"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "国境警備隊"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "追従者"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "ドゥカート金貨"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "劇団"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "実験"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "増築"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "貨物船"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "旗手"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "絹商人"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "山村"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "司祭"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "根城"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "発明家"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "研究"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "パトロン"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "学者"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "剣客"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "出納官"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "先見者"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "彫刻家"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "徴募官"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "悪党"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "老魔女"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "王笏"
+    },
+    {
+        "expansion": "ルネサンス",
+        "name": "香辛料"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "そり"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "黒猫"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "配給品"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "ラクダの隊列"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "ヤギ飼い"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "がらくた"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "雪深い村"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "牧羊犬"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "備蓄品"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "賞金稼ぎ"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "騎兵隊"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "馬丁"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "旅籠"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "枢機卿"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "村有緑地"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "強制退去"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "狩猟小屋"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "炉"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "貸し馬屋"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "パドック"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "聖域"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "魔女の集会"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "艀"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "首謀者"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "門番"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "鷹匠"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "漁師"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "デストリエ"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "行人"
+    },
+    {
+        "expansion": "移動動物園",
+        "name": "動物見本市"
+    },
+    {
+        "expansion": "同盟",
+        "name": "ごますり"
+    },
+    {
+        "expansion": "同盟",
+        "name": "道化棒"
+    },
+    {
+        "expansion": "同盟",
+        "name": "商人の野営地"
+    },
+    {
+        "expansion": "同盟",
+        "name": "歩哨"
+    },
+    {
+        "expansion": "同盟",
+        "name": "下役"
+    },
+    {
+        "expansion": "同盟",
+        "name": "輸入者"
+    },
+    {
+        "expansion": "同盟",
+        "name": "大工"
+    },
+    {
+        "expansion": "同盟",
+        "name": "急使"
+    },
+    {
+        "expansion": "同盟",
+        "name": "宿屋の主人"
+    },
+    {
+        "expansion": "同盟",
+        "name": "町"
+    },
+    {
+        "expansion": "同盟",
+        "name": "仲買人"
+    },
+    {
+        "expansion": "同盟",
+        "name": "王家のガレー船"
+    },
+    {
+        "expansion": "同盟",
+        "name": "首都"
+    },
+    {
+        "expansion": "同盟",
+        "name": "ガレリア"
+    },
+    {
+        "expansion": "同盟",
+        "name": "狩人"
+    },
+    {
+        "expansion": "同盟",
+        "name": "改造"
+    },
+    {
+        "expansion": "同盟",
+        "name": "専門家"
+    },
+    {
+        "expansion": "同盟",
+        "name": "交換"
+    },
+    {
+        "expansion": "同盟",
+        "name": "密使"
+    },
+    {
+        "expansion": "同盟",
+        "name": "ギルドマスター"
+    },
+    {
+        "expansion": "同盟",
+        "name": "蛮族"
+    },
+    {
+        "expansion": "同盟",
+        "name": "散兵"
+    },
+    {
+        "expansion": "同盟",
+        "name": "追いはぎ"
+    },
+    {
+        "expansion": "同盟",
+        "name": "契約書"
+    },
+    {
+        "expansion": "同盟",
+        "name": "侯爵"
+    },
+    {
+        "expansion": "同盟",
+        "name": "町民"
+    },
+    {
+        "expansion": "同盟",
+        "name": "卜占官"
+    },
+    {
+        "expansion": "同盟",
+        "name": "叙事詩"
+    },
+    {
+        "expansion": "同盟",
+        "name": "城砦"
+    },
+    {
+        "expansion": "同盟",
+        "name": "衝突"
+    },
+    {
+        "expansion": "同盟",
+        "name": "魔法使い"
+    },
+    {
+        "expansion": "略奪",
+        "name": "シャーマン"
+    },
+    {
+        "expansion": "略奪",
+        "name": "岩屋"
+    },
+    {
+        "expansion": "略奪",
+        "name": "調査"
+    },
+    {
+        "expansion": "略奪",
+        "name": "宝飾卵"
+    },
+    {
+        "expansion": "略奪",
+        "name": "檻"
+    },
+    {
+        "expansion": "略奪",
+        "name": "秘境の社"
+    },
+    {
+        "expansion": "略奪",
+        "name": "現場監督"
+    },
+    {
+        "expansion": "略奪",
+        "name": "セイレーン"
+    },
+    {
+        "expansion": "略奪",
+        "name": "密航者"
+    },
+    {
+        "expansion": "略奪",
+        "name": "財産目当て"
+    },
+    {
+        "expansion": "略奪",
+        "name": "港の村"
+    },
+    {
+        "expansion": "略奪",
+        "name": "置き去り"
+    },
+    {
+        "expansion": "略奪",
+        "name": "沼地の小屋"
+    },
+    {
+        "expansion": "略奪",
+        "name": "キャビンボーイ"
+    },
+    {
+        "expansion": "略奪",
+        "name": "上陸部隊"
+    },
+    {
+        "expansion": "略奪",
+        "name": "旗艦"
+    },
+    {
+        "expansion": "略奪",
+        "name": "地図作り"
+    },
+    {
+        "expansion": "略奪",
+        "name": "坩堝"
+    },
+    {
+        "expansion": "略奪",
+        "name": "工具"
+    },
+    {
+        "expansion": "略奪",
+        "name": "豊穣"
+    },
+    {
+        "expansion": "略奪",
+        "name": "ゴンドラ"
+    },
+    {
+        "expansion": "略奪",
+        "name": "縄"
+    },
+    {
+        "expansion": "略奪",
+        "name": "一等航海士"
+    },
+    {
+        "expansion": "略奪",
+        "name": "鉱山道路"
+    },
+    {
+        "expansion": "略奪",
+        "name": "巡礼者"
+    },
+    {
+        "expansion": "略奪",
+        "name": "価値ある村"
+    },
+    {
+        "expansion": "略奪",
+        "name": "トリックスター"
+    },
+    {
+        "expansion": "略奪",
+        "name": "乗組員"
+    },
+    {
+        "expansion": "略奪",
+        "name": "拡大"
+    },
+    {
+        "expansion": "略奪",
+        "name": "ロングシップ"
+    },
+    {
+        "expansion": "略奪",
+        "name": "操舵手"
+    },
+    {
+        "expansion": "略奪",
+        "name": "切り裂き魔"
+    },
+    {
+        "expansion": "略奪",
+        "name": "フリゲート船"
+    },
+    {
+        "expansion": "略奪",
+        "name": "小像"
+    },
+    {
+        "expansion": "略奪",
+        "name": "ペンダント"
+    },
+    {
+        "expansion": "略奪",
+        "name": "つるはし"
+    },
+    {
+        "expansion": "略奪",
+        "name": "銀山"
+    },
+    {
+        "expansion": "略奪",
+        "name": "埋められた財宝"
+    },
+    {
+        "expansion": "略奪",
+        "name": "戦利品の袋"
+    },
+    {
+        "expansion": "略奪",
+        "name": "王の隠し財産"
+    },
+    {
+        "expansion": "旭日",
+        "name": "魚屋"
+    },
+    {
+        "expansion": "旭日",
+        "name": "濡女"
+    },
+    {
+        "expansion": "旭日",
+        "name": "公家"
+    },
+    {
+        "expansion": "旭日",
+        "name": "名匠"
+    },
+    {
+        "expansion": "旭日",
+        "name": "室"
+    },
+    {
+        "expansion": "旭日",
+        "name": "川船"
+    },
+    {
+        "expansion": "旭日",
+        "name": "交替"
+    },
+    {
+        "expansion": "旭日",
+        "name": "小路"
+    },
+    {
+        "expansion": "旭日",
+        "name": "忍者"
+    },
+    {
+        "expansion": "旭日",
+        "name": "歌人"
+    },
+    {
+        "expansion": "旭日",
+        "name": "川の社"
+    },
+    {
+        "expansion": "旭日",
+        "name": "田舎の村"
+    },
+    {
+        "expansion": "旭日",
+        "name": "金山"
+    },
+    {
+        "expansion": "旭日",
+        "name": "勅使"
+    },
+    {
+        "expansion": "旭日",
+        "name": "駕籠"
+    },
+    {
+        "expansion": "旭日",
+        "name": "札差"
+    },
+    {
+        "expansion": "旭日",
+        "name": "浪人"
+    },
+    {
+        "expansion": "旭日",
+        "name": "狸"
+    },
+    {
+        "expansion": "旭日",
+        "name": "茶屋"
+    },
+    {
+        "expansion": "旭日",
+        "name": "狐"
+    },
+    {
+        "expansion": "旭日",
+        "name": "侍"
+    },
+    {
+        "expansion": "旭日",
+        "name": "米"
+    },
+    {
+        "expansion": "旭日",
+        "name": "山の社"
+    },
+    {
+        "expansion": "旭日",
+        "name": "大名"
+    },
+    {
+        "expansion": "旭日",
+        "name": "絵師"
+    }
+]

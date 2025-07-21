@@ -1,0 +1,962 @@
+[
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "借入"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "探索"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "施し"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "保存"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "移動遊園地"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "偵察隊"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "焚火"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "探検"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "立案"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "渡し船"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "使節団"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "巡礼"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "海路"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "奇襲"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "交易"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "舞踏会"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "失われた技術"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "鍛錬"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "相続"
+    },
+    {
+        "expansion": "冒険",
+        "kind": "イベント",
+        "name": "誘導"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "昇進"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "掘進"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "徴税"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "宴会"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "儀式"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "大地への塩まき"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "結婚式"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "意外な授かり物"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "征服"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "制圧"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "凱旋"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "寄付"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "イベント",
+        "name": "併合"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "狼の巣"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "オベリスク"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "凱旋門"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "果樹園"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "壁"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "宮殿"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "汚された神殿"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "公会堂"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "山賊の砦"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "水道橋"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "戦場"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "塔"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "闘技場"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "峠"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "砦"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "博物館"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "噴水"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "墓標"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "迷宮"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "浴場"
+    },
+    {
+        "expansion": "帝国",
+        "kind": "ランドマーク",
+        "name": "列柱"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "大聖堂"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "下水道"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "城門"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "星図"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "野外劇"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "悪巧み"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "縁日"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "サイロ"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "探査"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "学園"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "艦隊"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "ギルド集会所"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "資本主義"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "道路網"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "ピアッツァ"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "技術革新"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "兵舎"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "輪作"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "運河"
+    },
+    {
+        "expansion": "ルネサンス",
+        "kind": "プロジェクト",
+        "name": "山砦"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "遅延"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "絶望"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "博打"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "追求"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "乗馬"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "苦労"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "増大"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "進軍"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "輸送"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "放逐"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "特価品"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "投資"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "今を生きる"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "商売"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "要求"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "暴走"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "刈り入れ"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "包領"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "同盟"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "イベント",
+        "name": "植民"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "チョウの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "ラクダの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "カメレオンの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "カエルの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "ヤギの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "馬の習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "モグラの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "サルの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "ハツカネズミの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "ラバの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "カワウソの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "フクロウの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "雄牛の習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "豚の習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "ドブネズミの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "アザラシの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "羊の習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "リスの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "ウミガメの習性"
+    },
+    {
+        "expansion": "移動動物園",
+        "kind": "習性",
+        "name": "ミミズの習性"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "建築家ギルド"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "遊牧民団"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "穴居民"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "魔女の輪"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "都市国家"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "沿岸の避難港"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "工芸家ギルド"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "砂漠の案内人"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "発明家の家族"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "写本士の仲間たち"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "森の居住者"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "すり師団"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "島民"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "銀行家連盟"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "小売店主連盟"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "市場の町"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "山の民"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "占星術師団"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "メイソン団"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "平和的教団"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "高原の羊飼い"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "罠師の小屋"
+    },
+    {
+        "expansion": "同盟",
+        "kind": "同盟",
+        "name": "木工ギルド"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "埋葬"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "回避"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "配達"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "危難"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "突貫"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "襲撃"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "発進"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "鏡映"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "準備"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "物色"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "旅行"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "大渦巻"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "略奪行為"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "侵略"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "イベント",
+        "name": "繁栄"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "安価な"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "呪われた"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "運命の"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "へつらう"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "友好的な"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "せっかちな"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "受け継がれた"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "鼓舞する"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "近隣の"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "忍耐強い"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "敬虔な"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "無謀な"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "豊かな"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "内気な"
+    },
+    {
+        "expansion": "略奪",
+        "kind": "特性",
+        "name": "疲れ知らずの"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "蓄積"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "苦行"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "信用"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "洞察"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "金継ぎ"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "稽古"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "海上交易"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "賛辞"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "参集"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "イベント",
+        "name": "継続"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "来寇"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "好機到来"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "官僚制"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "神風"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "悟り"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "盛大な取引"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "豊作"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "偉大な指導者"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "成長"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "厳冬"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "神器"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "狼狽"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "進歩"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "急速拡大"
+    },
+    {
+        "expansion": "旭日",
+        "kind": "予言",
+        "name": "病"
+    }
+]
