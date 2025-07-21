@@ -1,0 +1,7 @@
+.on-button>.on-off-status-text::after {
+    content: "オン";
+}
+
+.off-button>.on-off-status-text::after {
+    content: "オフ";
+}
