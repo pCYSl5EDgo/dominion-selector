@@ -5,8 +5,8 @@
     <meta lang="ja" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ドミニオンのセレクタ</title>
-    <link rel="stylesheet" type="text/css" href="./index.css?v=2" />
-    <script type="module" src="./index.js?v=2"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css?v=3" />
+    <script type="module" src="./index.js?v=3"></script>
 </head>
 
 <body>
@@ -24,16 +24,217 @@
     <details name="selector" open>
         <summary>王国</summary>
         <div>
-            <button id="kingdom-all-off">全オフ</button>
-            <button id="kingdom-all-off-except-on">全オフ(既に選ばれた王国カード以外)</button>
-            <button id="kingdom-all-random">全ランダム</button>
-            <button id="kingdom-all-random-except-on">全ランダム(既に選ばれた王国カード以外)</button>
+            <div>
+                <button id="kingdom-all-off">オフ</button>
+                <button id="kingdom-all-off-except-on">オフ(既に選ばれたカード以外)</button>
+                <button id="kingdom-all-random">ランダム</button>
+                <button id="kingdom-all-random-except-on">ランダム(既に選ばれたカード以外)</button>
+            </div>
             <div id="expansions"></div>
         </div>
     </details>
     <details name="selector">
         <summary>ランドスケープ</summary>
-        <div></div>
+        <div>
+            <fieldset>
+                <legend>公式ルールで2つまで選ばれるランドスケープ</legend>
+                <button id="landscape-all-off">オフ</button>
+                <button id="landscape-all-off-except-on">オフ(既に選ばれたカード以外)</button>
+                <button id="landscape-all-random">ランダム</button>
+                <button id="landscape-all-random-except-on">ランダム(既に選ばれたカード以外)</button>
+            </fieldset>
+            <fieldset>
+                <legend>同盟</legend>
+                <button id="ally-off">オフ</button>
+                <button id="ally-random">ランダム</button>
+            </fieldset>
+            <fieldset>
+                <legend>予言</legend>
+                <button id="prophecy-off">オフ</button>
+                <button id="prophecy-random">ランダム</button>
+            </fieldset>
+            <div id="landscape-kind-0" class="1fr-auto-auto">
+                <button>イベント</button>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <span>オフ</span>
+                </label>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <span>ランダム</span>
+                </label>
+                <details class="full">
+                    <summary></summary>
+                    <div>
+                        <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="9">
+                            <span class="name">冒険</span>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <span>オフ</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <span>ランダム</span>
+                            </label>
+                            <details class="full">
+                                <summary></summary>
+                                <div></div>
+                            </details>
+                        </div>
+                        <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="10">
+                            <span class="name">帝国</span>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <span>オフ</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <span>ランダム</span>
+                            </label>
+                            <details class="full">
+                                <summary></summary>
+                                <div></div>
+                            </details>
+                        </div>
+                        <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="13">
+                            <span class="name">移動動物園</span>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <span>オフ</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <span>ランダム</span>
+                            </label>
+                            <details class="full">
+                                <summary></summary>
+                                <div></div>
+                            </details>
+                        </div>
+                        <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="15">
+                            <span class="name">略奪</span>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <span>オフ</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <span>ランダム</span>
+                            </label>
+                            <details class="full">
+                                <summary></summary>
+                                <div></div>
+                            </details>
+                        </div>
+                        <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="16">
+                            <span class="name">旭日</span>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <span>オフ</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <span>ランダム</span>
+                            </label>
+                            <details class="full">
+                                <summary></summary>
+                                <div></div>
+                            </details>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <div id="landscape-kind-1" class="1fr-auto-auto">
+                <button>ランドマーク</button>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <span>オフ</span>
+                </label>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <span>ランダム</span>
+                </label>
+                <details class="full">
+                    <summary></summary>
+                    <div></div>
+                </details>
+            </div>
+            <div id="landscape-kind-2" class="1fr-auto-auto">
+                <button>プロジェクト</button>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <span>オフ</span>
+                </label>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <span>ランダム</span>
+                </label>
+                <details class="full">
+                    <summary></summary>
+                    <div></div>
+                </details>
+            </div>
+            <div id="landscape-kind-3" class="1fr-auto-auto">
+                <button>習性</button>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <span>オフ</span>
+                </label>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <span>ランダム</span>
+                </label>
+                <details class="full">
+                    <summary></summary>
+                    <div></div>
+                </details>
+            </div>
+            <div id="landscape-kind-4" class="1fr-auto-auto">
+                <button>同盟</button>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <span>オフ</span>
+                </label>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <span>ランダム</span>
+                </label>
+                <details class="full">
+                    <summary></summary>
+                    <div></div>
+                </details>
+            </div>
+            <div id="landscape-kind-5" class="1fr-auto-auto">
+                <button>特性</button>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <span>オフ</span>
+                </label>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <span>ランダム</span>
+                </label>
+                <details class="full">
+                    <summary></summary>
+                    <div></div>
+                </details>
+            </div>
+            <div id="landscape-kind-6" class="1fr-auto-auto">
+                <span>予言</span>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <span>オフ</span>
+                </label>
+                <label>
+                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <span>ランダム</span>
+                </label>
+                <details class="full">
+                    <summary></summary>
+                    <div></div>
+                </details>
+            </div>
+        </div>
     </details>
     <div id="result">
     </div>
@@ -46,10 +247,10 @@
                 <span>オフ</span>
             </label>
             <label>
-                <input type="radio" value="random" checked />
+                <input type="radio" value="random-except-on" checked />
                 <span>ランダム</span>
             </label>
-            <details class="full">
+            <details class="full" name="expansion">
                 <summary></summary>
                 <div class="full"></div>
             </details>
@@ -64,7 +265,7 @@
                 <span>禁止</span>
             </label>
             <label>
-                <input type="radio" value="reject" />
+                <input type="radio" value="off" />
                 <span>オフ</span>
             </label>
             <label>
@@ -72,7 +273,25 @@
                 <span>ランダム</span>
             </label>
             <label>
-                <input type="radio" value="accept" />
+                <input type="radio" value="on" />
+                <span>オン</span>
+            </label>
+        </div>
+    </template>
+
+    <template id="landscape">
+        <div class="landscape 1fr-auto-auto-auto">
+            <span class="name"></span>
+            <label>
+                <input type="radio" value="off" />
+                <span>オフ</span>
+            </label>
+            <label>
+                <input type="radio" value="random" checked />
+                <span>ランダム</span>
+            </label>
+            <label>
+                <input type="radio" value="on" />
                 <span>オン</span>
             </label>
         </div>

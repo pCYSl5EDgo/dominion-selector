@@ -1,4 +1,4 @@
-﻿div {
+﻿div, details, summary {
     width: stretch;
     width: -webkit-fill-available;
     width: -moz-available;
@@ -29,6 +29,12 @@ summary::marker {
 .1fr-auto-auto-auto-auto {
     display: grid;
     grid-template-columns: 1fr auto auto auto auto;
+    align-items: center;
+}
+
+.1fr-auto-auto-auto {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
     align-items: center;
 }
 

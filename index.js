@@ -2858,7 +2858,11 @@ const expansionTemplate = document.getElementById("expansion").content;
 /**
  * @type {DocumentFragment}
  */
-const itemTemplate = document.getElementById("item").content;
+const kingdomTemplate = document.getElementById("kingdom").content;
+/**
+ * @type {DocumentFragment}
+ */
+const landscapeTemplate = document.getElementById("landscape").content;
 const expansionListElement = document.getElementById("expansions");
 let kingdomId = 0;
 for (let expansionId = 0; expansionId < expansions.length; expansionId++) {
@@ -2880,27 +2884,25 @@ for (let expansionId = 0; expansionId < expansions.length; expansionId++) {
   const kingdomDiv = rootDiv.querySelector("div");
   for (; kingdomId < kingdoms.length; kingdomId++) {
     const kingdom = kingdoms[kingdomId];
-    if (kingdom.expansionId !== expansionId) {
-      break;
-    }
+    if (kingdom.expansionId === expansionId) {
+      /**
+       * @type {DocumentFragment}
+       */
+      const kingdomClone = kingdomTemplate.cloneNode(true);
+      const kingdomRootDiv = kingdomClone.querySelector("div");
+      kingdomRootDiv.dataset.id = kingdomId.toString();
+      kingdomRootDiv.id = `kingdom-${kingdomId}`;
+      kingdomRootDiv.querySelector(".name").textContent = kingdom.japanese;
+      for (const inputElement of kingdomRootDiv.querySelectorAll("input")) {
+        inputElement.name = kingdomRootDiv.id;
+      }
 
-    /**
-     * @type {DocumentFragment}
-     */
-    const kingdomClone = itemTemplate.cloneNode(true);
-    const kingdomRootDiv = kingdomClone.querySelector("div");
-    kingdomRootDiv.dataset.id = kingdomId.toString();
-    kingdomRootDiv.id = `kingdom-${kingdomId}`;
-    kingdomClone.querySelector(".name").textContent = kingdom.japanese;
-    for (const inputElement of kingdomClone.querySelectorAll("input")) {
-      inputElement.name = kingdomRootDiv.id;
+      kingdomDiv.appendChild(kingdomClone);
     }
-
-    kingdomDiv.appendChild(kingdomClone);
   }
 
   rootDiv.querySelector("input[type='radio'][value='off']").addEventListener("change", () => changeMultipleKingdomStatus(kingdomDiv, "off"));
-  rootDiv.querySelector("input[type='radio'][value='random']").addEventListener("change", () => changeMultipleKingdomStatus(kingdomDiv, "random", "on"));
+  rootDiv.querySelector("input[type='radio'][value='random-except-on']").addEventListener("change", () => changeMultipleKingdomStatus(kingdomDiv, "random", "on"));
 
   expansionListElement.appendChild(expansionClone);
 }
