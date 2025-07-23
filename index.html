@@ -1,159 +1,71 @@
-<html>
+﻿<html>
 
 <head>
     <meta charset="utf-8" />
     <meta lang="ja" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ドミニオンのセレクタ</title>
+    <link rel="stylesheet" type="text/css" href="./index.css?v=1" />
+    <script type="module" src="./index.js?v=1"></script>
 </head>
 
 <body>
     <details name="selector" open>
         <summary>王国</summary>
         <div>
-            <button id="switch-all-kingdom" class="on-button"><span class="on-off-status-text">全て</button>
-            <div id="expansion-dominion">
-                <span>基本</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-intrigue">
-                <span>陰謀</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-seaside">
-                <span>海辺</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-alchemy">
-                <span>錬金術</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-prosperity">
-                <span>繁栄</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-cornucopia">
-                <span>収穫祭</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-guild">
-                <span>ギルド</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-hinterlands">
-                <span>異郷</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-dark-ages">
-                <span>暗黒時代</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-adventures">
-                <span>冒険</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-empires">
-                <span>帝国</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-nocturne">
-                <span>夜想曲</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-renaissance">
-                <span>ルネサンス</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-menagerie">
-                <span>移動動物園</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-allies">
-                <span>同盟</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-plunder">
-                <span>略奪</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
-            <div id="expansion-rising-sun">
-                <span>旭日</span>
-                <button class="switch-all on-button"><span class="on-off-status-text"></span></button>
-                <details>
-                    <summary>個別カード</summary>
-                    <div></div>
-                </details>
-            </div>
+            <button id="kingdom-all-off">全オフ</button>
+            <button id="kingdom-all-off-except-on">全オフ(既に選ばれた王国カード以外)</button>
+            <button id="kingdom-all-random">全ランダム</button>
+            <button id="kingdom-all-random-except-on">全ランダム(既に選ばれた王国カード以外)</button>
+            <div id="expansions"></div>
         </div>
     </details>
     <details name="selector">
         <summary>ランドスケープ</summary>
         <div></div>
     </details>
+    <div id="result">
+    </div>
+
+    <template id="expansion">
+        <div>
+            <span class="name"></span>
+            <label>
+                <input type="radio" value="off" />
+                <span>オフ</span>
+            </label>
+            <label>
+                <input type="radio" value="random" checked />
+                <span>ランダム</span>
+            </label>
+            <details>
+                <summary>個別カード</summary>
+                <div></div>
+            </details>
+        </div>
+    </template>
+
+    <template id="item">
+        <div>
+            <span class="name"></span>
+            <label>
+                <input type="radio" value="ban" />
+                <span>禁止</span>
+            </label>
+            <label>
+                <input type="radio" value="reject" />
+                <span>オフ</span>
+            </label>
+            <label>
+                <input type="radio" value="random" checked />
+                <span>ランダム</span>
+            </label>
+            <label>
+                <input type="radio" value="accept" />
+                <span>オン</span>
+            </label>
+        </div>
+    </template>
 </body>
 
 </html>

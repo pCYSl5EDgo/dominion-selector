@@ -5,3 +5,13 @@
 .off-button>.on-off-status-text::after {
     content: "オフ";
 }
+
+label {
+    background-color: darkslategrey;
+    color: white;
+
+    &:has(input:checked) {
+        background-color: aquamarine;
+        color: black;
+    }
+}

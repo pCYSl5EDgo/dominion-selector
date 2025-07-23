@@ -1,0 +1,2897 @@
+﻿const expansions = [
+  {
+    "id": 0,
+    "english": "dominion",
+    "japanese": "基本"
+  },
+  {
+    "id": 1,
+    "english": "intrigue",
+    "japanese": "陰謀"
+  },
+  {
+    "id": 2,
+    "english": "seaside",
+    "japanese": "海辺"
+  },
+  {
+    "id": 3,
+    "english": "alchemy",
+    "japanese": "錬金術"
+  },
+  {
+    "id": 4,
+    "english": "prosperity",
+    "japanese": "繁栄"
+  },
+  {
+    "id": 5,
+    "english": "cornucopia",
+    "japanese": "収穫祭"
+  },
+  {
+    "id": 6,
+    "english": "hinterlands",
+    "japanese": "異郷"
+  },
+  {
+    "id": 7,
+    "english": "dark-ages",
+    "japanese": "暗黒時代"
+  },
+  {
+    "id": 8,
+    "english": "guilds",
+    "japanese": "ギルド"
+  },
+  {
+    "id": 9,
+    "english": "adventures",
+    "japanese": "冒険"
+  },
+  {
+    "id": 10,
+    "english": "empires",
+    "japanese": "帝国"
+  },
+  {
+    "id": 11,
+    "english": "nocturne",
+    "japanese": "夜想曲"
+  },
+  {
+    "id": 12,
+    "english": "renaissance",
+    "japanese": "ルネサンス"
+  },
+  {
+    "id": 13,
+    "english": "menagerie",
+    "japanese": "移動動物園"
+  },
+  {
+    "id": 14,
+    "english": "allies",
+    "japanese": "同盟"
+  },
+  {
+    "id": 15,
+    "english": "plunder",
+    "japanese": "略奪"
+  },
+  {
+    "id": 16,
+    "english": "rising-sun",
+    "japanese": "旭日"
+  }
+];
+const landscapeKinds = [
+  {
+    "id": 0,
+    "english": "event",
+    "japanese": "イベント"
+  },
+  {
+    "id": 1,
+    "english": "landmark",
+    "japanese": "ランドマーク"
+  },
+  {
+    "id": 2,
+    "english": "project",
+    "japanese": "プロジェクト"
+  },
+  {
+    "id": 3,
+    "english": "way",
+    "japanese": "習性"
+  },
+  {
+    "id": 4,
+    "english": "ally",
+    "japanese": "同盟"
+  },
+  {
+    "id": 5,
+    "english": "trait",
+    "japanese": "特性"
+  },
+  {
+    "id": 6,
+    "english": "prophecy",
+    "japanese": "予言"
+  }
+];
+const landscapes = [
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "借入"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "探索"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "施し"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "保存"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "移動遊園地"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "偵察隊"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "焚火"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "探検"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "立案"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "渡し船"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "使節団"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "巡礼"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "海路"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "奇襲"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "交易"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "舞踏会"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "失われた技術"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "鍛錬"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "相続"
+  },
+  {
+    "expansionId": 9,
+    "kindId": 0,
+    "japanese": "誘導"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "昇進"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "掘進"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "徴税"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "宴会"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "儀式"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "大地への塩まき"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "結婚式"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "意外な授かり物"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "征服"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "制圧"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "凱旋"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "寄付"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 0,
+    "japanese": "併合"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "狼の巣"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "オベリスク"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "凱旋門"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "果樹園"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "壁"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "宮殿"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "汚された神殿"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "公会堂"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "山賊の砦"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "水道橋"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "戦場"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "塔"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "闘技場"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "峠"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "砦"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "博物館"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "噴水"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "墓標"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "迷宮"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "浴場"
+  },
+  {
+    "expansionId": 10,
+    "kindId": 1,
+    "japanese": "列柱"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "大聖堂"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "下水道"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "城門"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "星図"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "野外劇"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "悪巧み"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "縁日"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "サイロ"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "探査"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "学園"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "艦隊"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "ギルド集会所"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "資本主義"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "道路網"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "ピアッツァ"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "技術革新"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "兵舎"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "輪作"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "運河"
+  },
+  {
+    "expansionId": 12,
+    "kindId": 2,
+    "japanese": "山砦"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "遅延"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "絶望"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "博打"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "追求"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "乗馬"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "苦労"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "増大"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "進軍"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "輸送"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "放逐"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "特価品"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "投資"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "今を生きる"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "商売"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "要求"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "暴走"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "刈り入れ"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "包領"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "同盟"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 0,
+    "japanese": "植民"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "チョウの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "ラクダの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "カメレオンの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "カエルの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "ヤギの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "馬の習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "モグラの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "サルの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "ハツカネズミの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "ラバの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "カワウソの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "フクロウの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "雄牛の習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "豚の習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "ドブネズミの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "アザラシの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "羊の習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "リスの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "ウミガメの習性"
+  },
+  {
+    "expansionId": 13,
+    "kindId": 3,
+    "japanese": "ミミズの習性"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "建築家ギルド"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "遊牧民団"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "穴居民"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "魔女の輪"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "都市国家"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "沿岸の避難港"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "工芸家ギルド"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "砂漠の案内人"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "発明家の家族"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "写本士の仲間たち"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "森の居住者"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "すり師団"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "島民"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "銀行家連盟"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "小売店主連盟"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "市場の町"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "山の民"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "占星術師団"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "メイソン団"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "平和的教団"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "高原の羊飼い"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "罠師の小屋"
+  },
+  {
+    "expansionId": 14,
+    "kindId": 4,
+    "japanese": "木工ギルド"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "埋葬"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "回避"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "配達"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "危難"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "突貫"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "襲撃"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "発進"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "鏡映"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "準備"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "物色"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "旅行"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "大渦巻"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "略奪行為"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "侵略"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 0,
+    "japanese": "繁栄"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "安価な"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "呪われた"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "運命の"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "へつらう"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "友好的な"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "せっかちな"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "受け継がれた"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "鼓舞する"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "近隣の"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "忍耐強い"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "敬虔な"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "無謀な"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "豊かな"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "内気な"
+  },
+  {
+    "expansionId": 15,
+    "kindId": 5,
+    "japanese": "疲れ知らずの"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "蓄積"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "苦行"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "信用"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "洞察"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "金継ぎ"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "稽古"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "海上交易"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "賛辞"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "参集"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 0,
+    "japanese": "継続"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "来寇"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "好機到来"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "官僚制"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "神風"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "悟り"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "盛大な取引"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "豊作"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "偉大な指導者"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "成長"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "厳冬"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "神器"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "狼狽"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "進歩"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "急速拡大"
+  },
+  {
+    "expansionId": 16,
+    "kindId": 6,
+    "japanese": "病"
+  }
+];
+const kingdoms = [
+  {
+    "expansionId": 0,
+    "japanese": "地下貯蔵庫"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "礼拝堂"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "堀"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "家臣"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "工房"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "商人"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "前駆者"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "村"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "改築"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "鍛冶屋"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "金貸し"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "玉座の間"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "密猟者"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "民兵"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "役人"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "庭園"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "市場"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "衛兵"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "議事堂"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "研究所"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "鉱山"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "祝祭"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "書庫"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "山賊"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "魔女"
+  },
+  {
+    "expansionId": 0,
+    "japanese": "職人"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "手先"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "中庭"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "待ち伏せ"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "仮面舞踏会"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "執事"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "願いの井戸"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "貧民街"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "詐欺師"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "隠し通路"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "共謀者"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "鉱山の村"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "男爵"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "鉄工所"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "橋"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "外交官"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "風車"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "改良"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "交易場"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "廷臣"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "パトロール"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "拷問人"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "寵臣"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "身代わり"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "公爵"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "貴族"
+  },
+  {
+    "expansionId": 1,
+    "japanese": "ハーレム"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "原住民の村"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "停泊所"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "灯台"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "海図"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "倉庫"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "密輸人"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "見張り"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "漁村"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "サル"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "アストロラーベ"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "宝の地図"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "引揚水夫"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "巾着切り"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "潮溜り"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "船乗り"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "隊商"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "封鎖"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "島"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "バザー"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "宝物庫"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "前哨地"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "策士"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "商船"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "船着場"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "海の魔女"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "コルセア"
+  },
+  {
+    "expansionId": 2,
+    "japanese": "海賊"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "薬草商"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "弟子"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "変成"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "ブドウ園"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "薬師"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "大学"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "念視の泉"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "錬金術師"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "使い魔"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "賢者の石"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "ゴーレム"
+  },
+  {
+    "expansionId": 3,
+    "japanese": "支配"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "望楼"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "金床"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "記念碑"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "司教"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "労働者の村"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "書記"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "石切場"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "出資"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "ティアラ"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "造幣所"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "都市"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "保管庫"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "有力者"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "山師"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "大衆"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "収集品"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "水晶球"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "軍用金"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "大市場"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "隠し財産"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "拡張"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "宮廷"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "鍛造"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "銀行"
+  },
+  {
+    "expansionId": 4,
+    "japanese": "行商人"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "村落"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "移動動物園"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "店"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "再建"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "魔女娘"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "耕作者"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "狩猟団"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "道化師"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "豊穣の角笛"
+  },
+  {
+    "expansionId": 5,
+    "japanese": 5
+  },
+  {
+    "expansionId": 5,
+    "japanese": "渡し守"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "一騎討ち"
+  },
+  {
+    "expansionId": 5,
+    "japanese": "品評会"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "岐路"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "愚者の黄金"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "オアシス"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "開発"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "画策"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "坑道"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "番犬"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "織工"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "香辛料商人"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "よろずや"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "交易人"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "進路"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "遊牧民"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "大釜"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "街道"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "厩舎"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "狂戦士"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "車大工"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "スーク"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "地図職人"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "値切り屋"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "宿屋"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "辺境伯"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "魔女の小屋"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "国境の村"
+  },
+  {
+    "expansionId": 6,
+    "japanese": "農地"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "救貧院"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "従者"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "浮浪者"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "物乞い"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "隠遁者"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "賢者"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "採集者"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "物置"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "浮浪児"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "青空市場"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "金物商"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "吟遊詩人"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "行進"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "ゴミあさり"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "城塞"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "ネズミ"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "武器庫"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "死の荷車"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "襲撃者"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "封土"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "屑屋"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "山賊の宿営地"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "建て直し"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "地下墓所"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "墓暴き"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "伯爵"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "はみだし者"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "秘術師"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "盗賊"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "略奪"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "狂信者"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "騎士"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "偽造通貨"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "狩場"
+  },
+  {
+    "expansionId": 7,
+    "japanese": "祭壇"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "蝋燭職人"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "装蹄師"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "石工"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "診療所"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "助言者"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "広場"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "伝令官"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "熟練工"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "商人ギルド"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "肉屋"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "パン屋"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "予言者"
+  },
+  {
+    "expansionId": 8,
+    "japanese": "野盗"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "倒壊"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "鼠取り"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "法貨"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "地下牢"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "道具"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "魔除け"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "隊商の護衛"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "案内人"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "カササギ"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "使者"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "守銭奴"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "港町"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "山守"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "複製"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "変容"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "失われし都市"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "語り部"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "工匠"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "巨人"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "沼の妖婆"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "呪いの森"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "橋の下のトロル"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "御料車"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "ワイン商"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "遠隔地"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "掘出物"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "遺物"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "雇人"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "騎士見習い"
+  },
+  {
+    "expansionId": 9,
+    "japanese": "農民"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "戦車競走"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "農家の市場"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "女魔術師"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "生贄"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "ヴィラ"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "神殿"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "公共広場"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "庭師"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "ワイルドハント"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "軍団兵"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "資料庫"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "御守り"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "元手"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "冠"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "技術者"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "王室の鍛冶屋"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "市街"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "大君主"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "開拓者"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "陣地"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "パトリキ"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "剣闘士"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "投石機"
+  },
+  {
+    "expansionId": 10,
+    "japanese": "城"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "ドルイド"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "ピクシー"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "追跡者"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "修道院"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "守護者"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "忠犬"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "愚者"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "レプラコーン"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "秘密の洞窟"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "取り替え子"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "夜警"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "ゴーストタウン"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "詩人"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "恵みの村"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "コンクラーベ"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "ネクロマンサー"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "羊飼い"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "暗躍者"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "墓地"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "悪魔の工房"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "悪魔祓い"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "呪われた村"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "プーカ"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "聖なる木立ち"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "迫害者"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "悲劇のヒーロー"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "人狼"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "吸血鬼"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "納骨堂"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "悪人のアジト"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "カブラー"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "偶像"
+  },
+  {
+    "expansionId": 11,
+    "japanese": "夜襲"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "国境警備隊"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "追従者"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "ドゥカート金貨"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "劇団"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "実験"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "増築"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "貨物船"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "旗手"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "絹商人"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "山村"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "司祭"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "根城"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "発明家"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "研究"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "パトロン"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "学者"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "剣客"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "出納官"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "先見者"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "彫刻家"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "徴募官"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "悪党"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "老魔女"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "王笏"
+  },
+  {
+    "expansionId": 12,
+    "japanese": "香辛料"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "そり"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "黒猫"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "配給品"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "ラクダの隊列"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "ヤギ飼い"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "がらくた"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "雪深い村"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "牧羊犬"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "備蓄品"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "賞金稼ぎ"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "騎兵隊"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "馬丁"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "旅籠"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "枢機卿"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "村有緑地"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "強制退去"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "狩猟小屋"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "炉"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "貸し馬屋"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "パドック"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "聖域"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "魔女の集会"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "艀"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "首謀者"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "門番"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "鷹匠"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "漁師"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "デストリエ"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "行人"
+  },
+  {
+    "expansionId": 13,
+    "japanese": "動物見本市"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "ごますり"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "道化棒"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "商人の野営地"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "歩哨"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "下役"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "輸入者"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "大工"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "急使"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "宿屋の主人"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "町"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "仲買人"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "王家のガレー船"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "首都"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "ガレリア"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "狩人"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "改造"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "専門家"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "交換"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "密使"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "ギルドマスター"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "蛮族"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "散兵"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "追いはぎ"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "契約書"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "侯爵"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "町民"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "卜占官"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "叙事詩"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "城砦"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "衝突"
+  },
+  {
+    "expansionId": 14,
+    "japanese": "魔法使い"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "シャーマン"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "岩屋"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "調査"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "宝飾卵"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "檻"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "秘境の社"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "現場監督"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "セイレーン"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "密航者"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "財産目当て"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "港の村"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "置き去り"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "沼地の小屋"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "キャビンボーイ"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "上陸部隊"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "旗艦"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "地図作り"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "坩堝"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "工具"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "豊穣"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "ゴンドラ"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "縄"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "一等航海士"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "鉱山道路"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "巡礼者"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "価値ある村"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "トリックスター"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "乗組員"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "拡大"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "ロングシップ"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "操舵手"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "切り裂き魔"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "フリゲート船"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "小像"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "ペンダント"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "つるはし"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "銀山"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "埋められた財宝"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "戦利品の袋"
+  },
+  {
+    "expansionId": 15,
+    "japanese": "王の隠し財産"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "魚屋"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "濡女"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "公家"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "名匠"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "室"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "川船"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "交替"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "小路"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "忍者"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "歌人"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "川の社"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "田舎の村"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "金山"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "勅使"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "駕籠"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "札差"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "浪人"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "狸"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "茶屋"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "狐"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "侍"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "米"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "山の社"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "大名"
+  },
+  {
+    "expansionId": 16,
+    "japanese": "絵師"
+  }
+];
+
+/**
+ * @type {DocumentFragment}
+ */
+const expansionTemplate = document.getElementById("expansion").content;
+/**
+ * @type {DocumentFragment}
+ */
+const itemTemplate = document.getElementById("item").content;
+let kingdomId = 0;
+for (let expansionId = 0; expansionId < expansions.length; expansionId++) {
+  /**
+   * @type {DocumentFragment}
+   */
+  const expansionClone = expansionTemplate.cloneNode(true);
+  const rootDiv = expansionClone.querySelector("div");
+  rootDiv.id = `expansion-${expansionId}`;
+  rootDiv.querySelector(".name").textContent = expansions[expansionId].japanese;
+  for (const inputElement of rootDiv.querySelectorAll("input")) {
+    inputElement.name = rootDiv.id;
+  }
+
+  const kingdomDiv = rootDiv.querySelector("details>div");
+  for (; kingdomId < kingdoms.length; kingdomId++) {
+    const kingdom = kingdoms[kingdomId];
+    if (kingdom.expansionId !== expansionId) {
+      break;
+    }
+
+    /**
+     * @type {DocumentFragment}
+     */
+    const kingdomClone = itemTemplate.cloneNode(true);
+    const kingdomRootDiv = kingdomClone.querySelector("div");
+    kingdomRootDiv.id = `kingdom-${kingdomId}`;
+    kingdomClone.querySelector(".name").textContent = kingdom.japanese;
+    for (const inputElement of kingdomClone.querySelectorAll("input")) {
+      inputElement.name = kingdomRootDiv.id;
+    }
+
+    kingdomDiv.appendChild(kingdomClone);
+  }
+
+  document.getElementById("expansions").appendChild(expansionClone);
+}
