@@ -4,13 +4,13 @@
     <meta lang="ja">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ドミニオンのセレクタ</title>
-    <link rel="stylesheet" type="text/css" href="./index.css?v=4">
-    <script type="module" src="./index.js?v=4"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css?v=5">
+    <script type="module" src="./index.js?v=5"></script>
 </head>
 
 <body>
     <fieldset id="ban-display-status">
-        <legend>禁止カード表示設定</legend>
+        <legend>禁止カード</legend>
         <label>
             <input type="radio" name="ban-display-status" value="show-ban">
             <span>表示</span>
@@ -20,7 +20,7 @@
             <span>非表示</span>
         </label>
     </fieldset>
-    <details name="selector">
+    <details name="selector" open>
         <summary>王国</summary>
         <div>
             <div>
@@ -40,7 +40,7 @@
                         <input type="radio" value="random-except-on" checked="" name="expansion-0">
                         <span>ランダム</span>
                     </label>
-                    <details class="full" name="expansion" open="">
+                    <details class="full" name="expansion">
                         <summary></summary>
                         <div class="full">
                             <div class="kingdom 1fr-auto-auto-auto-auto" data-id="0" id="kingdom-0">
@@ -824,7 +824,7 @@
             </div>
         </div>
     </details>
-    <details name="selector" open="">
+    <details name="selector">
         <summary>ランドスケープ</summary>
         <div>
             <fieldset>

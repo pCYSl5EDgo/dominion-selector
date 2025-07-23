@@ -2851,12 +2851,34 @@ const kingdoms = [
   }
 ];
 
+/**
+ * @type {DocumentFragment}
+ */
+const landscapeTemplate = document.getElementById("landscape").content;
+const landscapeAddTarget = document.getElementById("landscape-kind-6").querySelector("details>div");
+for (let landscapeId = 0; landscapeId < landscapes.length; landscapeId++) {
+  const item = landscapes[landscapeId];
+  if (item.expansionId === 16 && item.kindId === 6) {
+    /**
+     * @type {DocumentFragment}
+     */
+    const clone = landscapeTemplate.cloneNode(true);
+    /**
+     * @type {HTMLDivElement}
+     */
+    const rootDiv = clone.querySelector("landscape");
+    rootDiv.dataset.id = landscapeId.toString();
+    rootDiv.querySelector(".name").textContent = item.japanese;
+    landscapeAddTarget.appendChild(clone);
+  }
+}
+
 for (const toggleButtonElement of document.querySelectorAll(".expansion button.name")) {
   toggleButtonElement.addEventListener("click", toggleSiblingDetailsElement);
 }
 
 for (const radioElement of document.querySelectorAll(".expansion>label>input[type='radio']")) {
-  const containerElement = radioElement.parentElement.parentElement.querySelector(">details>div");
+  const containerElement = radioElement.parentElement.parentElement.querySelector(":scope>details>div");
   if (radioElement.value === "off") {
     radioElement.addEventListener("change", () => changeMultipleKingdomStatus(containerElement, "off"));
   } else {
@@ -2864,6 +2886,7 @@ for (const radioElement of document.querySelectorAll(".expansion>label>input[typ
   }
 }
 
+const expansionListElement = document.getElementById("expansions");
 document.getElementById("kingdom-all-off").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "off"));
 document.getElementById("kingdom-all-off-except-on").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "off", "on"));
 document.getElementById("kingdom-all-random").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "random"));
