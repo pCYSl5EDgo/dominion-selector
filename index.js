@@ -2877,8 +2877,14 @@ for (let landscapeId = 0; landscapeId < landscapes.length; landscapeId++) {
   }
 }
 
-for (const toggleButtonElement of document.querySelectorAll(".expansion button.name")) {
-  toggleButtonElement.addEventListener("click", toggleSiblingDetailsElement);
+for (const toggleButtonElement of document.querySelectorAll(".expansion>button.name")) {
+  toggleButtonElement.addEventListener("click", function() {
+    /**
+     * @type {HTMLDetailsElement}
+     */
+    const detailsElement = this.querySelector(":scope~details");
+    detailsElement.open = !detailsElement.open;
+  });
 }
 
 for (const radioElement of document.querySelectorAll(".expansion>label>input[type='radio']")) {
@@ -2892,17 +2898,6 @@ for (const radioElement of document.querySelectorAll(".expansion>label>input[typ
 
 initializeClickEventOfNextElementSiblingOffOrRandomExceptOn(document.getElementById("kingdom-all"));
 initializeClickEventOfDetailsOffOrRandom(document.getElementById("landscape-kind-6"));
-
-/**
- * @this {HTMLButtonElement}
- */
-function toggleSiblingDetailsElement() {
-  /**
-   * @type {HTMLDetailsElement}
-   */
-  const detailElement = this.parentElement.querySelector(":scope>details");
-  detailElement.open = !detailElement.open;
-}
 
 /**
  * @param {Document|HTMLElement} searchRegionElement

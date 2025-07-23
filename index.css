@@ -4,6 +4,10 @@
     width: -moz-available;
 }
 
+input[type="radio"] {
+    display: none;
+}
+
 .on-button>.on-off-status-text::after {
     content: "オン";
 }
