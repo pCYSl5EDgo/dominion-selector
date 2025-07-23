@@ -5,11 +5,22 @@
     <meta lang="ja" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ドミニオンのセレクタ</title>
-    <link rel="stylesheet" type="text/css" href="./index.css?v=1" />
-    <script type="module" src="./index.js?v=1"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css?v=2" />
+    <script type="module" src="./index.js?v=2"></script>
 </head>
 
 <body>
+    <fieldset id="ban-display-status">
+        <legend>禁止カード表示設定</legend>
+        <label>
+            <input type="radio" name="ban-display-status" value="show-ban" />
+            <span>表示</span>
+        </label>
+        <label>
+            <input type="radio" name="ban-display-status" value="hide-ban" checked />
+            <span>非表示</span>
+        </label>
+    </fieldset>
     <details name="selector" open>
         <summary>王国</summary>
         <div>
@@ -28,8 +39,8 @@
     </div>
 
     <template id="expansion">
-        <div>
-            <span class="name"></span>
+        <div class="expansion 1fr-auto-auto" data-id="">
+            <button class="name"></button>
             <label>
                 <input type="radio" value="off" />
                 <span>オフ</span>
@@ -38,15 +49,15 @@
                 <input type="radio" value="random" checked />
                 <span>ランダム</span>
             </label>
-            <details>
-                <summary>個別カード</summary>
-                <div></div>
+            <details class="full">
+                <summary></summary>
+                <div class="full"></div>
             </details>
         </div>
     </template>
 
-    <template id="item">
-        <div>
+    <template id="kingdom">
+        <div class="kingdom 1fr-auto-auto-auto-auto" data-id="">
             <span class="name"></span>
             <label>
                 <input type="radio" value="ban" />

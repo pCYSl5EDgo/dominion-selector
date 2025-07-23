@@ -2859,6 +2859,7 @@ const expansionTemplate = document.getElementById("expansion").content;
  * @type {DocumentFragment}
  */
 const itemTemplate = document.getElementById("item").content;
+const expansionListElement = document.getElementById("expansions");
 let kingdomId = 0;
 for (let expansionId = 0; expansionId < expansions.length; expansionId++) {
   /**
@@ -2866,13 +2867,17 @@ for (let expansionId = 0; expansionId < expansions.length; expansionId++) {
    */
   const expansionClone = expansionTemplate.cloneNode(true);
   const rootDiv = expansionClone.querySelector("div");
+  rootDiv.dataset.id = expansionId.toString();
   rootDiv.id = `expansion-${expansionId}`;
-  rootDiv.querySelector(".name").textContent = expansions[expansionId].japanese;
+
+  const expansionNameButton = rootDiv.querySelector(".name");
+  expansionNameButton.textContent = expansions[expansionId].japanese;
+  expansionNameButton.addEventListener("click", expansionDetailsToggleEventHandler);
   for (const inputElement of rootDiv.querySelectorAll("input")) {
     inputElement.name = rootDiv.id;
   }
 
-  const kingdomDiv = rootDiv.querySelector("details>div");
+  const kingdomDiv = rootDiv.querySelector("div");
   for (; kingdomId < kingdoms.length; kingdomId++) {
     const kingdom = kingdoms[kingdomId];
     if (kingdom.expansionId !== expansionId) {
@@ -2884,6 +2889,7 @@ for (let expansionId = 0; expansionId < expansions.length; expansionId++) {
      */
     const kingdomClone = itemTemplate.cloneNode(true);
     const kingdomRootDiv = kingdomClone.querySelector("div");
+    kingdomRootDiv.dataset.id = kingdomId.toString();
     kingdomRootDiv.id = `kingdom-${kingdomId}`;
     kingdomClone.querySelector(".name").textContent = kingdom.japanese;
     for (const inputElement of kingdomClone.querySelectorAll("input")) {
@@ -2893,5 +2899,46 @@ for (let expansionId = 0; expansionId < expansions.length; expansionId++) {
     kingdomDiv.appendChild(kingdomClone);
   }
 
-  document.getElementById("expansions").appendChild(expansionClone);
+  rootDiv.querySelector("input[type='radio'][value='off']").addEventListener("change", () => changeMultipleKingdomStatus(kingdomDiv, "off"));
+  rootDiv.querySelector("input[type='radio'][value='random']").addEventListener("change", () => changeMultipleKingdomStatus(kingdomDiv, "random", "on"));
+
+  expansionListElement.appendChild(expansionClone);
+}
+
+document.getElementById("kingdom-all-off").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "off"));
+document.getElementById("kingdom-all-off-except-on").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "off", "on"));
+document.getElementById("kingdom-all-random").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "random"));
+document.getElementById("kingdom-all-random-except-on").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "random", "on"));
+
+/**
+ * @this {HTMLButtonElement}
+ */
+function expansionDetailsToggleEventHandler() {
+  /**
+   * @type {HTMLDetailsElement}
+   */
+  const detailElement = this.parentElement.querySelector("details");
+  detailElement.open = !detailElement.open;
+}
+
+/**
+ * @param {Document|HTMLElement} searchRegionElement
+ * @param {string} status
+ * @param {string} [exceptStatus]
+ */
+function changeMultipleKingdomStatus(searchRegionElement, status, exceptStatus) {
+  if (exceptStatus) {
+    for (const targetKingdomElement of searchRegionElement.querySelectorAll(`.kingdom input[type='radio'][value="${status}"]:not(:checked)`)) {
+      if (targetKingdomElement.parentElement.querySelector(`input[type="radio"][value=${exceptStatus}]:is([name="${targetKingdomElement.name}"], [name="ban"]):checked`) == null) {
+        targetKingdomElement.checked = true;
+      }
+    }
+  }
+  else {
+    for (const targetKingdomElement of searchRegionElement.querySelectorAll(`.kingdom input[type='radio'][value="${status}"]:not(:checked)`)) {
+      if (targetKingdomElement.parentElement.querySelector(`input[type="radio"][value=${exceptStatus}][name="ban"]:checked`) == null) {
+        targetKingdomElement.checked = true;
+      }
+    }
+  }
 }

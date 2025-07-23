@@ -1,3 +1,9 @@
+﻿div {
+    width: stretch;
+    width: -webkit-fill-available;
+    width: -moz-available;
+}
+
 .on-button>.on-off-status-text::after {
     content: "オン";
 }
@@ -14,4 +20,28 @@ label {
         background-color: aquamarine;
         color: black;
     }
+}
+
+summary::marker {
+    content: "";
+}
+
+.1fr-auto-auto-auto-auto {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto auto;
+    align-items: center;
+}
+
+.1fr-auto-auto {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+}
+
+.full {
+    grid-column: 1/-1;
+}
+
+#ban-display-status:has([value="hide-ban"]:checked) + details :is(.kingdom, .landscape) {
+    display: none;
 }
