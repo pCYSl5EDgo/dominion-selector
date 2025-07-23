@@ -2869,6 +2869,10 @@ for (let landscapeId = 0; landscapeId < landscapes.length; landscapeId++) {
     const rootDiv = clone.querySelector(".landscape");
     rootDiv.dataset.id = landscapeId.toString();
     rootDiv.querySelector(".name").textContent = item.japanese;
+    for (const inputElement of rootDiv.getElementsByTagName("input")) {
+      inputElement.name = `landscape-${landscapeId}`;
+    }
+
     landscapeAddTarget.appendChild(clone);
   }
 }
@@ -2880,17 +2884,14 @@ for (const toggleButtonElement of document.querySelectorAll(".expansion button.n
 for (const radioElement of document.querySelectorAll(".expansion>label>input[type='radio']")) {
   const containerElement = radioElement.parentElement.parentElement.querySelector(":scope>details>div");
   if (radioElement.value === "off") {
-    radioElement.addEventListener("change", () => changeMultipleKingdomStatus(containerElement, "off"));
+    radioElement.addEventListener("change", () => changeMultipleStatus(containerElement, "kingdom", "off"));
   } else {
-    radioElement.addEventListener("change", () => changeMultipleKingdomStatus(containerElement, "random", "on"));
+    radioElement.addEventListener("change", () => changeMultipleStatus(containerElement, "kingdom", "random", "on"));
   }
 }
 
-const expansionListElement = document.getElementById("expansions");
-document.getElementById("kingdom-all-off").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "off"));
-document.getElementById("kingdom-all-off-except-on").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "off", "on"));
-document.getElementById("kingdom-all-random").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "random"));
-document.getElementById("kingdom-all-random-except-on").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "random", "on"));
+initializeClickEventOfNextElementSiblingOffOrRandomExceptOn(document.getElementById("kingdom-all"));
+initializeClickEventOfDetailsOffOrRandom(document.getElementById("landscape-kind-6"));
 
 /**
  * @this {HTMLButtonElement}
@@ -2899,28 +2900,53 @@ function toggleSiblingDetailsElement() {
   /**
    * @type {HTMLDetailsElement}
    */
-  const detailElement = this.parentElement.querySelector("details");
+  const detailElement = this.parentElement.querySelector(":scope>details");
   detailElement.open = !detailElement.open;
 }
 
 /**
  * @param {Document|HTMLElement} searchRegionElement
+ * @param {string} targetClass
  * @param {string} status
  * @param {string} [exceptStatus]
  */
-function changeMultipleKingdomStatus(searchRegionElement, status, exceptStatus) {
-  if (exceptStatus) {
-    for (const targetKingdomElement of searchRegionElement.querySelectorAll(`.kingdom input[type='radio'][value="${status}"]:not(:checked)`)) {
-      if (targetKingdomElement.parentElement.querySelector(`input[type="radio"][value=${exceptStatus}]:is([name="${targetKingdomElement.name}"], [name="ban"]):checked`) == null) {
-        targetKingdomElement.checked = true;
-      }
+function changeMultipleStatus(searchRegionElement, targetClass, status, exceptStatus) {
+  const queryText = exceptStatus == null ? ":scope>label>input[type='radio'][value='ban']:checked" : `:scope>label>input[type='radio']:is([value='ban'],[value='${exceptStatus}']):checked`;
+  /**
+   * @type {NodeListOf<HTMLInputElement>}
+   */
+  const candidates = searchRegionElement.querySelectorAll(`.${targetClass}>label>input[type='radio'][value="${status}"]:not(:checked)`);
+  for (const candidate of candidates) {
+    if (candidate.parentElement.parentElement.querySelector(queryText) == null) {
+      // neither banned nor excpetStatus
+      candidate.checked = true;
     }
   }
-  else {
-    for (const targetKingdomElement of searchRegionElement.querySelectorAll(`.kingdom input[type='radio'][value="${status}"]:not(:checked)`)) {
-      if (targetKingdomElement.parentElement.querySelector(`input[type="radio"][value=${exceptStatus}][name="ban"]:checked`) == null) {
-        targetKingdomElement.checked = true;
-      }
-    }
-  }
+}
+
+/**
+ * @param {HTMLElement} element
+ */
+function initializeClickEventOfNextElementSiblingOffOrRandomExceptOn(element) {
+  element.querySelector(":scope>button.all-off").addEventListener("click", function () {
+    changeMultipleStatus(this.parentElement.nextElementSibling, "kingdom", "off");
+  });
+  element.querySelector(":scope>button.all-random").addEventListener("click", function () {
+    changeMultipleStatus(this.parentElement.nextElementSibling, "kingdom", "random");
+  });
+  element.querySelector(":scope>button.all-off-except-on").addEventListener("click", function () {
+    changeMultipleStatus(this.parentElement.nextElementSibling, "kingdom", "off", "on");
+  });
+  element.querySelector(":scope>button.all-random-except-on").addEventListener("click", function () {
+    changeMultipleStatus(this.parentElement.nextElementSibling, "kingdom", "random", "on");
+  });
+}
+
+function initializeClickEventOfDetailsOffOrRandom(element) {
+  element.querySelector(":scope>label>input[type='radio'].all-off").addEventListener("change", function() {
+    changeMultipleStatus(this.parentElement.parentElement.querySelector(":scope>details>div"), "landscape", "off");
+  });
+  element.querySelector(":scope>label>input[type='radio'].all-random").addEventListener("change", function() {
+    changeMultipleStatus(this.parentElement.parentElement.querySelector(":scope>details>div"), "landscape", "random");
+  });
 }
