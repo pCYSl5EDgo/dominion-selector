@@ -2882,7 +2882,7 @@ for (const toggleButtonElement of document.querySelectorAll(".expansion>button.n
     /**
      * @type {HTMLDetailsElement}
      */
-    const detailsElement = this.querySelector(":scope~details");
+    const detailsElement = this.parentElement.querySelector(":scope>details");
     detailsElement.open = !detailsElement.open;
   });
 }
