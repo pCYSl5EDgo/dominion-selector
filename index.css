@@ -48,6 +48,6 @@ summary::marker {
     grid-column: 1/-1;
 }
 
-#ban-display-status:has([value="hide-ban"]:checked) + details :is(.kingdom, .landscape) {
+#ban-display-status:has([value="hide-ban"]:checked) + details :is(.kingdom, .landscape):has(input[type="radio"][value="ban"]:checked) {
     display: none;
 }

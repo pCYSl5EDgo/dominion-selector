@@ -1,27 +1,26 @@
 ﻿<html>
-
 <head>
-    <meta charset="utf-8" />
-    <meta lang="ja" />
+    <meta charset="utf-8">
+    <meta lang="ja">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ドミニオンのセレクタ</title>
-    <link rel="stylesheet" type="text/css" href="./index.css?v=3" />
-    <script type="module" src="./index.js?v=3"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css?v=4">
+    <script type="module" src="./index.js?v=4"></script>
 </head>
 
 <body>
     <fieldset id="ban-display-status">
         <legend>禁止カード表示設定</legend>
         <label>
-            <input type="radio" name="ban-display-status" value="show-ban" />
+            <input type="radio" name="ban-display-status" value="show-ban">
             <span>表示</span>
         </label>
         <label>
-            <input type="radio" name="ban-display-status" value="hide-ban" checked />
+            <input type="radio" name="ban-display-status" value="hide-ban" checked="">
             <span>非表示</span>
         </label>
     </fieldset>
-    <details name="selector" open>
+    <details name="selector">
         <summary>王国</summary>
         <div>
             <div>
@@ -30,10 +29,802 @@
                 <button id="kingdom-all-random">ランダム</button>
                 <button id="kingdom-all-random-except-on">ランダム(既に選ばれたカード以外)</button>
             </div>
-            <div id="expansions"></div>
+            <div id="expansions">
+                <div class="expansion 1fr-auto-auto" data-id="0" id="expansion-0">
+                    <button class="name">基本</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-0">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-0">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion" open="">
+                        <summary></summary>
+                        <div class="full">
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="0" id="kingdom-0">
+                                <span class="name">地下貯蔵庫</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-0">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-0">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-0">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-0">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="1" id="kingdom-1">
+                                <span class="name">礼拝堂</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-1">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-1">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-1">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-1">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="2" id="kingdom-2">
+                                <span class="name">堀</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-2">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-2">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-2">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-2">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="3" id="kingdom-3">
+                                <span class="name">家臣</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-3">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-3">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-3">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-3">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="4" id="kingdom-4">
+                                <span class="name">工房</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-4">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-4">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-4">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-4">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="5" id="kingdom-5">
+                                <span class="name">商人</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-5">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-5">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-5">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-5">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="6" id="kingdom-6">
+                                <span class="name">前駆者</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-6">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-6">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-6">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-6">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="7" id="kingdom-7">
+                                <span class="name">村</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-7">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-7">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-7">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-7">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="8" id="kingdom-8">
+                                <span class="name">改築</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-8">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-8">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-8">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-8">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="9" id="kingdom-9">
+                                <span class="name">鍛冶屋</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-9">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-9">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-9">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-9">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="10" id="kingdom-10">
+                                <span class="name">金貸し</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-10">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-10">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-10">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-10">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="11" id="kingdom-11">
+                                <span class="name">玉座の間</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-11">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-11">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-11">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-11">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="12" id="kingdom-12">
+                                <span class="name">密猟者</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-12">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-12">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-12">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-12">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="13" id="kingdom-13">
+                                <span class="name">民兵</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-13">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-13">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-13">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-13">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="14" id="kingdom-14">
+                                <span class="name">役人</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-14">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-14">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-14">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-14">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="15" id="kingdom-15">
+                                <span class="name">庭園</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-15">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-15">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-15">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-15">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="16" id="kingdom-16">
+                                <span class="name">市場</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-16">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-16">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-16">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-16">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="17" id="kingdom-17">
+                                <span class="name">衛兵</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-17">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-17">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-17">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-17">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="18" id="kingdom-18">
+                                <span class="name">議事堂</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-18">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-18">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-18">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-18">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="19" id="kingdom-19">
+                                <span class="name">研究所</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-19">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-19">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-19">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-19">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="20" id="kingdom-20">
+                                <span class="name">鉱山</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-20">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-20">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-20">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-20">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="21" id="kingdom-21">
+                                <span class="name">祝祭</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-21">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-21">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-21">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-21">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="22" id="kingdom-22">
+                                <span class="name">書庫</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-22">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-22">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-22">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-22">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="23" id="kingdom-23">
+                                <span class="name">山賊</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-23">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-23">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-23">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-23">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="24" id="kingdom-24">
+                                <span class="name">魔女</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-24">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-24">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-24">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-24">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+
+                            <div class="kingdom 1fr-auto-auto-auto-auto" data-id="25" id="kingdom-25">
+                                <span class="name">職人</span>
+                                <label>
+                                    <input type="radio" value="ban" name="kingdom-25">
+                                    <span>禁止</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="off" name="kingdom-25">
+                                    <span>オフ</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="random" checked="" name="kingdom-25">
+                                    <span>ランダム</span>
+                                </label>
+                                <label>
+                                    <input type="radio" value="on" name="kingdom-25">
+                                    <span>オン</span>
+                                </label>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="1" id="expansion-1">
+                    <button class="name">陰謀</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-1">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-1">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="2" id="expansion-2">
+                    <button class="name">海辺</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-2">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-2">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="3" id="expansion-3">
+                    <button class="name">錬金術</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-3">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-3">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="4" id="expansion-4">
+                    <button class="name">繁栄</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-4">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-4">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="5" id="expansion-5">
+                    <button class="name">収穫祭</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-5">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-5">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="6" id="expansion-6">
+                    <button class="name">異郷</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-6">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-6">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="7" id="expansion-7">
+                    <button class="name">暗黒時代</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-7">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-7">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="8" id="expansion-8">
+                    <button class="name">ギルド</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-8">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-8">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="9" id="expansion-9">
+                    <button class="name">冒険</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-9">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-9">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="10" id="expansion-10">
+                    <button class="name">帝国</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-10">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-10">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="11" id="expansion-11">
+                    <button class="name">夜想曲</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-11">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-11">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="12" id="expansion-12">
+                    <button class="name">ルネサンス</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-12">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-12">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="13" id="expansion-13">
+                    <button class="name">移動動物園</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-13">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-13">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="14" id="expansion-14">
+                    <button class="name">同盟</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-14">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-14">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="15" id="expansion-15">
+                    <button class="name">略奪</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-15">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-15">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+
+                <div class="expansion 1fr-auto-auto" data-id="16" id="expansion-16">
+                    <button class="name">旭日</button>
+                    <label>
+                        <input type="radio" value="off" name="expansion-16">
+                        <span>オフ</span>
+                    </label>
+                    <label>
+                        <input type="radio" value="random-except-on" checked="" name="expansion-16">
+                        <span>ランダム</span>
+                    </label>
+                    <details class="full" name="expansion">
+                        <summary></summary>
+                        <div class="full"></div>
+                    </details>
+                </div>
+            </div>
         </div>
     </details>
-    <details name="selector">
+    <details name="selector" open="">
         <summary>ランドスケープ</summary>
         <div>
             <fieldset>
@@ -56,11 +847,11 @@
             <div id="landscape-kind-0" class="1fr-auto-auto">
                 <button>イベント</button>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <input type="radio" name="landscape-kind-0" value="off">
                     <span>オフ</span>
                 </label>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <input type="radio" name="landscape-kind-0" value="random">
                     <span>ランダム</span>
                 </label>
                 <details class="full">
@@ -69,11 +860,11 @@
                         <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="9">
                             <span class="name">冒険</span>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <input type="radio" name="landscape-kind-0" value="off">
                                 <span>オフ</span>
                             </label>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <input type="radio" name="landscape-kind-0" value="random">
                                 <span>ランダム</span>
                             </label>
                             <details class="full">
@@ -84,11 +875,11 @@
                         <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="10">
                             <span class="name">帝国</span>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <input type="radio" name="landscape-kind-0" value="off">
                                 <span>オフ</span>
                             </label>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <input type="radio" name="landscape-kind-0" value="random">
                                 <span>ランダム</span>
                             </label>
                             <details class="full">
@@ -99,11 +890,11 @@
                         <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="13">
                             <span class="name">移動動物園</span>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <input type="radio" name="landscape-kind-0" value="off">
                                 <span>オフ</span>
                             </label>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <input type="radio" name="landscape-kind-0" value="random">
                                 <span>ランダム</span>
                             </label>
                             <details class="full">
@@ -114,11 +905,11 @@
                         <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="15">
                             <span class="name">略奪</span>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <input type="radio" name="landscape-kind-0" value="off">
                                 <span>オフ</span>
                             </label>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <input type="radio" name="landscape-kind-0" value="random">
                                 <span>ランダム</span>
                             </label>
                             <details class="full">
@@ -129,11 +920,11 @@
                         <div class="landscapes-of-expansion 1fr-auto-auto" data-expansion-id="16">
                             <span class="name">旭日</span>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="off" />
+                                <input type="radio" name="landscape-kind-0" value="off">
                                 <span>オフ</span>
                             </label>
                             <label>
-                                <input type="radio" name="landscape-kind-0" value="random" />
+                                <input type="radio" name="landscape-kind-0" value="random">
                                 <span>ランダム</span>
                             </label>
                             <details class="full">
@@ -147,11 +938,11 @@
             <div id="landscape-kind-1" class="1fr-auto-auto">
                 <button>ランドマーク</button>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <input type="radio" name="landscape-kind-0" value="off">
                     <span>オフ</span>
                 </label>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <input type="radio" name="landscape-kind-0" value="random">
                     <span>ランダム</span>
                 </label>
                 <details class="full">
@@ -162,11 +953,11 @@
             <div id="landscape-kind-2" class="1fr-auto-auto">
                 <button>プロジェクト</button>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <input type="radio" name="landscape-kind-0" value="off">
                     <span>オフ</span>
                 </label>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <input type="radio" name="landscape-kind-0" value="random">
                     <span>ランダム</span>
                 </label>
                 <details class="full">
@@ -177,11 +968,11 @@
             <div id="landscape-kind-3" class="1fr-auto-auto">
                 <button>習性</button>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <input type="radio" name="landscape-kind-0" value="off">
                     <span>オフ</span>
                 </label>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <input type="radio" name="landscape-kind-0" value="random">
                     <span>ランダム</span>
                 </label>
                 <details class="full">
@@ -192,11 +983,11 @@
             <div id="landscape-kind-4" class="1fr-auto-auto">
                 <button>同盟</button>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <input type="radio" name="landscape-kind-0" value="off">
                     <span>オフ</span>
                 </label>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <input type="radio" name="landscape-kind-0" value="random">
                     <span>ランダム</span>
                 </label>
                 <details class="full">
@@ -207,11 +998,11 @@
             <div id="landscape-kind-5" class="1fr-auto-auto">
                 <button>特性</button>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <input type="radio" name="landscape-kind-0" value="off">
                     <span>オフ</span>
                 </label>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <input type="radio" name="landscape-kind-0" value="random">
                     <span>ランダム</span>
                 </label>
                 <details class="full">
@@ -222,11 +1013,11 @@
             <div id="landscape-kind-6" class="1fr-auto-auto">
                 <span>予言</span>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="off" />
+                    <input type="radio" name="landscape-kind-0" value="off">
                     <span>オフ</span>
                 </label>
                 <label>
-                    <input type="radio" name="landscape-kind-0" value="random" />
+                    <input type="radio" name="landscape-kind-0" value="random">
                     <span>ランダム</span>
                 </label>
                 <details class="full">
@@ -239,63 +1030,28 @@
     <div id="result">
     </div>
 
-    <template id="expansion">
-        <div class="expansion 1fr-auto-auto" data-id="">
-            <button class="name"></button>
-            <label>
-                <input type="radio" value="off" />
-                <span>オフ</span>
-            </label>
-            <label>
-                <input type="radio" value="random-except-on" checked />
-                <span>ランダム</span>
-            </label>
-            <details class="full" name="expansion">
-                <summary></summary>
-                <div class="full"></div>
-            </details>
-        </div>
-    </template>
-
-    <template id="kingdom">
-        <div class="kingdom 1fr-auto-auto-auto-auto" data-id="">
+    <template id="landscape">
+        <div class="landscape 1fr-auto-auto-auto-auto" data-id="">
             <span class="name"></span>
             <label>
-                <input type="radio" value="ban" />
+                <input type="radio" value="ban">
                 <span>禁止</span>
             </label>
             <label>
-                <input type="radio" value="off" />
+                <input type="radio" value="off">
                 <span>オフ</span>
             </label>
             <label>
-                <input type="radio" value="random" checked />
+                <input type="radio" value="random" checked="">
                 <span>ランダム</span>
             </label>
             <label>
-                <input type="radio" value="on" />
+                <input type="radio" value="on">
                 <span>オン</span>
             </label>
         </div>
     </template>
 
-    <template id="landscape">
-        <div class="landscape 1fr-auto-auto-auto">
-            <span class="name"></span>
-            <label>
-                <input type="radio" value="off" />
-                <span>オフ</span>
-            </label>
-            <label>
-                <input type="radio" value="random" checked />
-                <span>ランダム</span>
-            </label>
-            <label>
-                <input type="radio" value="on" />
-                <span>オン</span>
-            </label>
-        </div>
-    </template>
+
 </body>
-
 </html>

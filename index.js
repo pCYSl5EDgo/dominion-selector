@@ -2851,60 +2851,17 @@ const kingdoms = [
   }
 ];
 
-/**
- * @type {DocumentFragment}
- */
-const expansionTemplate = document.getElementById("expansion").content;
-/**
- * @type {DocumentFragment}
- */
-const kingdomTemplate = document.getElementById("kingdom").content;
-/**
- * @type {DocumentFragment}
- */
-const landscapeTemplate = document.getElementById("landscape").content;
-const expansionListElement = document.getElementById("expansions");
-let kingdomId = 0;
-for (let expansionId = 0; expansionId < expansions.length; expansionId++) {
-  /**
-   * @type {DocumentFragment}
-   */
-  const expansionClone = expansionTemplate.cloneNode(true);
-  const rootDiv = expansionClone.querySelector("div");
-  rootDiv.dataset.id = expansionId.toString();
-  rootDiv.id = `expansion-${expansionId}`;
+for (const toggleButtonElement of document.querySelectorAll(".expansion button.name")) {
+  toggleButtonElement.addEventListener("click", toggleSiblingDetailsElement);
+}
 
-  const expansionNameButton = rootDiv.querySelector(".name");
-  expansionNameButton.textContent = expansions[expansionId].japanese;
-  expansionNameButton.addEventListener("click", expansionDetailsToggleEventHandler);
-  for (const inputElement of rootDiv.querySelectorAll("input")) {
-    inputElement.name = rootDiv.id;
+for (const radioElement of document.querySelectorAll(".expansion>label>input[type='radio']")) {
+  const containerElement = radioElement.parentElement.parentElement.querySelector(">details>div");
+  if (radioElement.value === "off") {
+    radioElement.addEventListener("change", () => changeMultipleKingdomStatus(containerElement, "off"));
+  } else {
+    radioElement.addEventListener("change", () => changeMultipleKingdomStatus(containerElement, "random", "on"));
   }
-
-  const kingdomDiv = rootDiv.querySelector("div");
-  for (; kingdomId < kingdoms.length; kingdomId++) {
-    const kingdom = kingdoms[kingdomId];
-    if (kingdom.expansionId === expansionId) {
-      /**
-       * @type {DocumentFragment}
-       */
-      const kingdomClone = kingdomTemplate.cloneNode(true);
-      const kingdomRootDiv = kingdomClone.querySelector("div");
-      kingdomRootDiv.dataset.id = kingdomId.toString();
-      kingdomRootDiv.id = `kingdom-${kingdomId}`;
-      kingdomRootDiv.querySelector(".name").textContent = kingdom.japanese;
-      for (const inputElement of kingdomRootDiv.querySelectorAll("input")) {
-        inputElement.name = kingdomRootDiv.id;
-      }
-
-      kingdomDiv.appendChild(kingdomClone);
-    }
-  }
-
-  rootDiv.querySelector("input[type='radio'][value='off']").addEventListener("change", () => changeMultipleKingdomStatus(kingdomDiv, "off"));
-  rootDiv.querySelector("input[type='radio'][value='random-except-on']").addEventListener("change", () => changeMultipleKingdomStatus(kingdomDiv, "random", "on"));
-
-  expansionListElement.appendChild(expansionClone);
 }
 
 document.getElementById("kingdom-all-off").addEventListener("click", () => changeMultipleKingdomStatus(expansionListElement, "off"));
@@ -2915,7 +2872,7 @@ document.getElementById("kingdom-all-random-except-on").addEventListener("click"
 /**
  * @this {HTMLButtonElement}
  */
-function expansionDetailsToggleEventHandler() {
+function toggleSiblingDetailsElement() {
   /**
    * @type {HTMLDetailsElement}
    */
