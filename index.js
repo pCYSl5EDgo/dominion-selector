@@ -2866,7 +2866,7 @@ for (let landscapeId = 0; landscapeId < landscapes.length; landscapeId++) {
     /**
      * @type {HTMLDivElement}
      */
-    const rootDiv = clone.querySelector("landscape");
+    const rootDiv = clone.querySelector(".landscape");
     rootDiv.dataset.id = landscapeId.toString();
     rootDiv.querySelector(".name").textContent = item.japanese;
     landscapeAddTarget.appendChild(clone);
