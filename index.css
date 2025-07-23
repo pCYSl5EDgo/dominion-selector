@@ -30,28 +30,26 @@ summary::marker {
     content: "";
 }
 
-.grid-1fr-1fr {
+[class*="grid-1fr-"] {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
+    column-gap: 1ex;
+}
+
+.grid-1fr-1fr {
+    grid-template-columns: 1fr 1fr;
 }
 
 .grid-1fr-auto-auto-auto-auto {
-    display: grid;
     grid-template-columns: 1fr auto auto auto auto;
-    align-items: center;
 }
 
 .grid-1fr-auto-auto-auto {
-    display: grid;
     grid-template-columns: 1fr auto auto auto;
-    align-items: center;
 }
 
 .grid-1fr-auto-auto {
-    display: grid;
     grid-template-columns: 1fr auto auto;
-    align-items: center;
 }
 
 .full {
