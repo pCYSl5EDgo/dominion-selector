@@ -30,25 +30,25 @@ summary::marker {
     content: "";
 }
 
-.1fr-1fr {
+.grid-1fr-1fr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
-.1fr-auto-auto-auto-auto {
+.grid-1fr-auto-auto-auto-auto {
     display: grid;
     grid-template-columns: 1fr auto auto auto auto;
     align-items: center;
 }
 
-.1fr-auto-auto-auto {
+.grid-1fr-auto-auto-auto {
     display: grid;
     grid-template-columns: 1fr auto auto auto;
     align-items: center;
 }
 
-.1fr-auto-auto {
+.grid-1fr-auto-auto {
     display: grid;
     grid-template-columns: 1fr auto auto;
     align-items: center;
