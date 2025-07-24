@@ -2851,6 +2851,17 @@ const kingdoms = [
   }
 ];
 
+for (const detailsSwitchElement of document.getElementsByClassName("details-switch")) {
+  for (let nextElementSibling = detailsSwitchElement.nextElementSibling; ; nextElementSibling = nextElementSibling.nextElementSibling) {
+    if (nextElementSibling.tagName === "DETAILS") {
+      nextElementSibling.addEventListener("click", () => {
+        nextElementSibling.open = !nextElementSibling.open;
+      });
+      break;
+    }
+  }
+}
+
 for (const toggleButtonElement of document.querySelectorAll(".expansion>button.name")) {
   toggleButtonElement.addEventListener("click", function () {
     /**
@@ -2866,7 +2877,7 @@ for (const radioElement of document.querySelectorAll(".expansion>label>input[typ
   if (radioElement.value === "off") {
     radioElement.addEventListener("change", () => changeMultipleStatus(containerElement, "kingdom", "off"));
   } else {
-    radioElement.addEventListener("change", () => changeMultipleStatus(containerElement, "kingdom", "random", "on"));
+    radioElement.addEventListener("change", () => changeMultipleStatus(containerElement, "kingdom", "random"));
   }
 }
 
