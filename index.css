@@ -1,4 +1,6 @@
-﻿div, details, summary {
+﻿div,
+details,
+summary {
     width: stretch;
     width: -webkit-fill-available;
     width: -moz-available;
@@ -30,10 +32,16 @@ summary::marker {
     content: "";
 }
 
-[class*="grid-1fr-"] {
+.griddable {
     display: grid;
     align-items: center;
-    column-gap: 1ex;
+    column-gap: 0.5ex;
+    row-gap: 1ex;
+
+    & .grid-column-subgrid {
+        display: grid;
+        grid-template-columns: subgrid;
+    }
 }
 
 .grid-1fr-1fr {
@@ -56,6 +64,6 @@ summary::marker {
     grid-column: 1/-1;
 }
 
-#ban-display-status:has([value="hide-ban"]:checked) + details :is(.kingdom, .landscape):has(input[type="radio"][value="ban"]:checked) {
+#ban-display-status:has([value="hide-ban"]:checked)+details :is(.kingdom, .landscape):has(input[type="radio"][value="ban"]:checked) {
     display: none;
 }
