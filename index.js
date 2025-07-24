@@ -2851,32 +2851,6 @@ const kingdoms = [
   }
 ];
 
-/**
- * @type {DocumentFragment}
- */
-const itemTemplate = document.getElementById("item").content;
-for (let expansionId = 1, kingdomId = 26; expansionId < expansions.length; expansionId++) {
-  const kingdomDiv = document.querySelector(`#expansion-${expansionId}>details>div`);
-  for (; kingdomId < kingdoms.length; kingdomId++) {
-    const kingdom = kingdoms[kingdomId];
-    if (kingdom.expansionId !== expansionId) {
-      break;
-    }
-    /**
-     * @type {DocumentFragment}
-     */
-    const kingdomClone = itemTemplate.cloneNode(true);
-    const kingdomRootDiv = kingdomClone.querySelector("div");
-    kingdomRootDiv.id += kingdomId.toString();
-    kingdomClone.querySelector(".name").textContent = kingdom.japanese;
-    for (const inputElement of kingdomClone.querySelectorAll("input")) {
-      inputElement.name += kingdomId.toString();
-    }
-
-    kingdomDiv.appendChild(kingdomClone);
-  }
-}
-
 for (const toggleButtonElement of document.querySelectorAll(".expansion>button.name")) {
   toggleButtonElement.addEventListener("click", function () {
     /**
