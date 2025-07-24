@@ -2925,3 +2925,29 @@ function initializeClickEventOfDetailsOffOrRandom(element) {
     changeMultipleStatus(this.parentElement.parentElement.querySelector(":scope>details>div"), "landscape", "random");
   });
 }
+
+/**
+ * @type {DocumentFragment}
+ */
+const temp = document.getElementById("landscape").content;
+for (let index = 1; index < 6; index++) {
+  const insertionPoint = document.querySelector(`#landscape-kind-${index} details>div`);
+  for (let landscapeId = 0; landscapeId < landscapes.length; landscapeId++) {
+    const item = landscapes[landscapeId];
+    if (item.kindId === index) {
+      /**
+       * @type {DocumentFragment}
+       */
+      const clone = temp.cloneNode(true);
+      const div = clone.getElementById("landscape-");
+      div.dataset.id = landscapeId.toString();
+      div.querySelector(".name").textContent = item.japanese;
+      div.id += div.dataset.id;
+      for (const inputElement of div.getElementsByTagName("input")) {
+        inputElement.name += div.dataset.id;
+      }
+
+      insertionPoint.appendChild(clone);
+    }
+  }
+}

@@ -7,8 +7,8 @@
   content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self';connect-src 'self';child-src 'self';frame-src 'self';">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>ドミニオンのセレクタ</title>
- <link rel="stylesheet" type="text/css" href="./index.css?v=15">
- <script type="module" src="./index.js?v=15"></script>
+ <link rel="stylesheet" type="text/css" href="./index.css?v=16">
+ <script type="module" src="./index.js?v=16"></script>
 </head>
 
 <body>
@@ -9630,22 +9630,22 @@
  </div>
 
  <template id="landscape">
-  <div class="landscape grid-column-subgrid full" data-id="">
+  <div class="landscape grid-column-subgrid full" data-id="" id="landscape-">
    <span class="name"></span>
    <label>
-    <input type="radio" value="ban">
+    <input type="radio" value="ban" name="landscape-">
     <span>禁止</span>
    </label>
    <label>
-    <input type="radio" value="off">
+    <input type="radio" value="off" name="landscape-">
     <span>オフ</span>
    </label>
    <label>
-    <input type="radio" value="random" checked>
+    <input type="radio" value="random" name="landscape-" checked>
     <span>ランダム</span>
    </label>
    <label>
-    <input type="radio" value="on">
+    <input type="radio" value="on" name="landscape-">
     <span>オン</span>
    </label>
   </div>
