@@ -21,10 +21,17 @@ input[type="radio"] {
 label {
  background-color: darkslategrey;
  color: white;
+ text-align: center;
+ text-transform: capitalize;
 
  &:has(input:checked) {
   background-color: aquamarine;
   color: black;
+ }
+
+ &>span {
+  display: inline-block;
+  padding-inline: 0.5ex;
  }
 }
 

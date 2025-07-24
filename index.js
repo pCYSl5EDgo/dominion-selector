@@ -2854,22 +2854,12 @@ const kingdoms = [
 for (const detailsSwitchElement of document.getElementsByClassName("details-switch")) {
   for (let nextElementSibling = detailsSwitchElement.nextElementSibling; ; nextElementSibling = nextElementSibling.nextElementSibling) {
     if (nextElementSibling.tagName === "DETAILS") {
-      nextElementSibling.addEventListener("click", () => {
+      detailsSwitchElement.addEventListener("click", () => {
         nextElementSibling.open = !nextElementSibling.open;
       });
       break;
     }
   }
-}
-
-for (const toggleButtonElement of document.querySelectorAll(".expansion>button.name")) {
-  toggleButtonElement.addEventListener("click", function () {
-    /**
-     * @type {HTMLDetailsElement}
-     */
-    const detailsElement = this.parentElement.querySelector(":scope>details");
-    detailsElement.open = !detailsElement.open;
-  });
 }
 
 for (const radioElement of document.querySelectorAll(".expansion>label>input[type='radio']")) {
