@@ -1,69 +1,75 @@
-﻿div,
+div,
 details,
 summary {
-    width: stretch;
-    width: -webkit-fill-available;
-    width: -moz-available;
+ width: stretch;
+ width: -webkit-fill-available;
+ width: -moz-available;
 }
 
 input[type="radio"] {
-    display: none;
+ display: none;
 }
 
 .on-button>.on-off-status-text::after {
-    content: "オン";
+ content: "オン";
 }
 
 .off-button>.on-off-status-text::after {
-    content: "オフ";
+ content: "オフ";
 }
 
 label {
-    background-color: darkslategrey;
-    color: white;
+ background-color: darkslategrey;
+ color: white;
 
-    &:has(input:checked) {
-        background-color: aquamarine;
-        color: black;
-    }
+ &:has(input:checked) {
+  background-color: aquamarine;
+  color: black;
+ }
 }
 
-summary::marker {
-    content: "";
+summary {
+ &:empty {
+  display: none;
+ }
+
+ &::marker {
+  content: "";
+ }
 }
 
 .griddable {
-    display: grid;
-    align-items: center;
-    column-gap: 0.5ex;
-    row-gap: 1ex;
+ display: grid;
+ align-items: center;
+ column-gap: 0.5ex;
+ row-gap: 1ex;
 
-    & .grid-column-subgrid {
-        display: grid;
-        grid-template-columns: subgrid;
-    }
+ & .grid-column-subgrid {
+  display: grid;
+  grid-template-columns: subgrid;
+ }
 }
 
 .grid-1fr-1fr {
-    grid-template-columns: 1fr 1fr;
+ grid-template-columns: 1fr 1fr;
 }
 
 .grid-1fr-auto-auto-auto-auto {
-    grid-template-columns: 1fr auto auto auto auto;
+ grid-template-columns: 1fr auto auto auto auto;
 }
 
 .grid-1fr-auto-auto-auto {
-    grid-template-columns: 1fr auto auto auto;
+ grid-template-columns: 1fr auto auto auto;
 }
 
 .grid-1fr-auto-auto {
-    grid-template-columns: 1fr auto auto;
+ grid-template-columns: 1fr auto auto;
 }
 
 .full {
-    grid-column: 1/-1;
+ grid-column: 1/-1;
 }
 
 #ban-display-status:has([value="hide-ban"]:checked)+details :is(.kingdom, .landscape):has(input[type="radio"][value="ban"]:checked) {
-    display: none;
+ display: none;
 }

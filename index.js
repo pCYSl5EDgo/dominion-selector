@@ -1,4 +1,4 @@
-﻿const expansions = [
+const expansions = [
   {
     "id": 0,
     "english": "dominion",
@@ -2870,7 +2870,30 @@ for (const radioElement of document.querySelectorAll(".expansion>label>input[typ
   }
 }
 
-initializeClickEventOfNextElementSiblingOffOrRandomExceptOn(document.getElementById("kingdom-all"));
+for (const inputElement of document.querySelectorAll("input[type='radio'][name='expansion-all']")) {
+  if (inputElement.value === "off") {
+    inputElement.addEventListener("checked", function () {
+      for (const expansionElement of document.querySelectorAll(".expansion>label>input[value='off']")) {
+        if (expansionElement.checked) {
+          expansionElement.dispatchEvent(new Event("change", { bubbles: true }));
+        } else {
+          expansionElement.checked = true;
+        }
+      }
+    });
+  } else {
+    inputElement.addEventListener("checked", function () {
+      for (const expansionElement of document.querySelectorAll(".expansion>label>input[value='random']")) {
+        if (expansionElement.checked) {
+          expansionElement.dispatchEvent(new Event("change", { bubbles: true }));
+        } else {
+          expansionElement.checked = true;
+        }
+      }
+    });
+  }
+}
+
 initializeClickEventOfDetailsOffOrRandom(document.getElementById("landscape-kind-6"));
 
 /**
@@ -2891,40 +2914,6 @@ function changeMultipleStatus(searchRegionElement, targetClass, status, exceptSt
       candidate.checked = true;
     }
   }
-}
-
-/**
- * @param {HTMLElement} element
- */
-function initializeClickEventOfNextElementSiblingOffOrRandomExceptOn(element) {
-  element.querySelector(":scope>button.all-off").addEventListener("click", function () {
-    /**
-     * @type {HTMLInputElement}
-     */
-    const inputElement = this.parentElement.querySelector(`:scope>label>input[type='radio'][value='off'][name='${this.parentElement.id}']`);
-    if (inputElement.checked) {
-      inputElement.dispatchEvent(new Event("change", { bubbles: true }));
-    } else {
-      inputElement.checked = true;
-    }
-  });
-  element.querySelector(":scope>button.all-random").addEventListener("click", function () {
-    changeMultipleStatus(this.parentElement.nextElementSibling, "kingdom", "random");
-  });
-  element.querySelector(":scope>button.all-off-except-on").addEventListener("click", function () {
-    changeMultipleStatus(this.parentElement.nextElementSibling, "kingdom", "off", "on");
-  });
-  element.querySelector(":scope>button.all-random-except-on").addEventListener("click", function () {
-    /**
-     * @type {HTMLInputElement}
-     */
-    const inputElement = this.parentElement.querySelector(`:scope>label>input[type='radio'][value='random-except-on'][name='${this.parentElement.id}']`);
-    if (inputElement.checked) {
-      inputElement.dispatchEvent(new Event("change", { bubbles: true }));
-    } else {
-      inputElement.checked = true;
-    }
-  });
 }
 
 function initializeClickEventOfDetailsOffOrRandom(element) {
