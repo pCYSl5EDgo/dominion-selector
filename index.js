@@ -2872,7 +2872,7 @@ for (const radioElement of document.querySelectorAll(".expansion>label>input[typ
 
 for (const inputElement of document.querySelectorAll("input[type='radio'][name='expansion-all']")) {
   if (inputElement.value === "off") {
-    inputElement.addEventListener("checked", function () {
+    inputElement.addEventListener("change", function () {
       for (const expansionElement of document.querySelectorAll(".expansion>label>input[value='off']")) {
         if (expansionElement.checked) {
           expansionElement.dispatchEvent(new Event("change", { bubbles: true }));
@@ -2882,7 +2882,7 @@ for (const inputElement of document.querySelectorAll("input[type='radio'][name='
       }
     });
   } else {
-    inputElement.addEventListener("checked", function () {
+    inputElement.addEventListener("change", function () {
       for (const expansionElement of document.querySelectorAll(".expansion>label>input[value='random']")) {
         if (expansionElement.checked) {
           expansionElement.dispatchEvent(new Event("change", { bubbles: true }));
