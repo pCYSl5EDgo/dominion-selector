@@ -1,9 +1,9 @@
 div,
 details,
 summary {
- width: stretch;
  width: -webkit-fill-available;
  width: -moz-available;
+ width: stretch;
 }
 
 input[type="radio"] {
@@ -36,6 +36,10 @@ label {
 }
 
 summary {
+ background-color: darkslategrey;
+ color: white;
+ text-transform: capitalize;
+
  &:empty {
   display: none;
  }
@@ -43,6 +47,11 @@ summary {
  &::marker {
   content: "";
  }
+}
+
+details[open]>summary:not(:empty) {
+ background-color: aquamarine;
+ color: black;
 }
 
 .griddable {
