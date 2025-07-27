@@ -337,14 +337,14 @@ document.getElementById("save").addEventListener("click", () => {
  for (const banned of document.querySelectorAll(".ban-hide .kingdom ~ label>input[type='radio'][value='ban']:checked")) {
   kingdom += (2n ** BigInt(banned.parentElement.parentElement.dataset.id));
  }
- self.localStorage.setItem("banned-kingdom", kingdom.toString(16));
+ self.localStorage.setItem("banned-kingdom", kingdom.toString());
 
  let landscape = 0n;
  for (const banned of document.querySelectorAll(".ban-hide .landscape ~ label>input[type='radio'][value='ban']:checked")) {
   landscape += (2n ** BigInt(banned.parentElement.parentElement.dataset.id));
  }
 
- self.localStorage.setItem("banned-landscape", landscape.toString(16));
+ self.localStorage.setItem("banned-landscape", landscape.toString());
 });
 
 document.getElementById("icons-license").addEventListener("toggle", async function () {
