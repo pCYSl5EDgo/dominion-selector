@@ -135,6 +135,11 @@ label:has(input[type="radio"][name="main-tabs"][value="supply"]:checked)~#supply
                 display: grid;
                 grid-template-columns: subgrid;
                 grid-column: 1/-1;
+
+                >span {
+                    display: inline-block;
+                    padding-inline: 0.5em;
+                }
             }
         }
     }
@@ -160,6 +165,19 @@ header:has(input[value="hide-ban"]:checked)+main :is(#kingdoms, #event-landscape
 
     #supply-settings-trait-is-random:not(:checked)+span::before {
         content: "(対象王国カード選択)";
+    }
+}
+
+#supply-kingdoms>div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 1em;
+    row-gap: 1ex;
+
+    >div {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 1/-1;
     }
 }
 
