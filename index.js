@@ -250,8 +250,9 @@ const resetSupplyKingdoms = () => {
    for (let i = 0; i < array.length; i++) {
     const randomIndex = array.at(i) % randomIds.length;
     selectedIds.push(randomIds[randomIndex]);
-    if (randomIndex + 1 !== randomIds.length) {
-     randomIds[randomIndex] = randomIds.pop();
+    const lastValue = randomIds.pop();
+    if (randomIndex !== randomIds.length) {
+     randomIds[randomIndex] = lastValue;
     }
    }
   }

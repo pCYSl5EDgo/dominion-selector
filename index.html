@@ -6,8 +6,8 @@
   content="default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self';connect-src 'self';child-src 'self';frame-src 'self';">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>ドミニオンのセレクタ</title>
- <link rel="stylesheet" type="text/css" href="./index.css?v=18">
- <script type="module" src="./index.js?v=18"></script>
+ <link rel="stylesheet" type="text/css" href="./index.css?v=17">
+ <script type="module" src="./index.js?v=17"></script>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
  <header>
   <button popovertarget="settings">
    <svg width="24" height="24">
-    <use href="./icons.svg?v=2#settings"></use>
+    <use href="./icons.svg#settings"></use>
    </svg>
   </button>
 
@@ -33,7 +33,7 @@
    </fieldset>
    <button id="settings-reset-all">
     <svg width="24" height="24">
-     <use href="./icons.svg?v=2#clear_all"></use>
+     <use href="./icons.svg#clear_all"></use>
     </svg>
     <span>完全リセット</span>
    </button>
@@ -45,7 +45,7 @@
 
   <button id="save">
    <svg width="24" height="24">
-    <use href="./icons.svg?v=2#save"></use>
+    <use href="./icons.svg#save"></use>
    </svg>
   </button>
  </header>
@@ -108,13 +108,13 @@
    </div>
    <button id="supply-raffle" class="preserve-tree">
     <svg width="24" height="24">
-     <use href="./icons.svg?v=2#playing_cards"></use>
+     <use href="./icons.svg#playing_cards"></use>
     </svg>
     <span>抽選</span>
    </button>
    <button id="supply-reset" class="preserve-tree">
     <svg width="24" height="24">
-     <use href="./icons.svg?v=2#clear_all"></use>
+     <use href="./icons.svg#clear_all"></use>
     </svg>
     <span>リセット</span>
    </button>
@@ -142,7 +142,6 @@
    </label>
   </div>
  </template>
-
  <template id="expansion-template">
   <details data-id="">
    <summary data-selector="card">
@@ -152,7 +151,6 @@
    <div class="card"></div>
   </details>
  </template>
-
  <template id="landscapes-template">
   <details data-id="" name="">
    <summary data-selector="card">
@@ -162,7 +160,6 @@
    <div class="card"></div>
   </details>
  </template>
-
  <template id="radio-off-random-template">
   <label>
    <input type="radio" value="off">
@@ -173,7 +170,6 @@
    <span>乱数</span>
   </label>
  </template>
-
  <template id="radio-ban-off-random-template">
   <label>
    <input type="radio" value="ban">
@@ -188,14 +184,12 @@
    <span>乱数</span>
   </label>
  </template>
-
  <template id="raffle-card-template">
   <div data-id="">
    <span class="expansion name" data-id=""></span>
    <span class="name"></span>
   </div>
  </template>
-
 </body>
 
 </html>
