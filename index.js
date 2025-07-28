@@ -352,7 +352,7 @@ document.getElementById("icons-license").addEventListener("toggle", async functi
  this.lastElementChild.textContent = await (await fetch("./Apache%20License%20of%20Google%20Matrial%20Icons.txt")).text();
 }, { once: true });
 
-for (let banned = BigInt(self.localStorage.getItem("banned-kingdom") ?? 0), id = 0; banned !== 0n; banned >>= 1, id++) {
+for (let banned = BigInt(self.localStorage.getItem("banned-kingdom") ?? 0), id = 0; banned !== 0n; banned >>= 1n, id++) {
  if (banned & 1n) {
   const target = document.querySelector(`input[type="radio"][value="ban"][name="kingdom-${id}"]:not(:checked)`);
   target.checked = true;
@@ -360,7 +360,7 @@ for (let banned = BigInt(self.localStorage.getItem("banned-kingdom") ?? 0), id =
  }
 }
 
-for (let banned = BigInt(self.localStorage.getItem("banned-landscape") ?? 0), id = 0; banned !== 0n; banned >>= 1, id++) {
+for (let banned = BigInt(self.localStorage.getItem("banned-landscape") ?? 0), id = 0; banned !== 0n; banned >>= 1n, id++) {
  if (banned & 1n) {
   const target = document.querySelector(`input[type="radio"][value="ban"][name="landscape-${id}"]:not(:checked)`);
   target.checked = true;
