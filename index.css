@@ -148,6 +148,13 @@ label:has(input[type="radio"][name="main-tabs"][value="supply"]:checked)~#supply
 #supply {
     display: none;
     grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1ex;
+    row-gap: 0.5lh;
+
+    >div {
+        grid-column: 1/-1;
+    }
 }
 
 header:has(input[value="hide-ban"]:checked)+main :is(#kingdoms, #event-landscapes, #normal-landscapes, #unique-landscapes) {
