@@ -332,38 +332,6 @@ function recursiveFindAncestor(element, condition) {
  return element;
 }
 
-document.getElementById("save").addEventListener("click", () => {
- /** @type {bigint}*/
- let kingdom = 0n;
- for (const banned of document.querySelectorAll(".ban-hide .kingdom ~ label>input[type='radio'][value='ban']:checked")) {
-  kingdom += (2n ** BigInt(banned.parentElement.parentElement.dataset.id));
- }
- self.localStorage.setItem("banned-kingdom", kingdom.toString());
-
- let landscape = 0n;
- for (const banned of document.querySelectorAll(".ban-hide .landscape ~ label>input[type='radio'][value='ban']:checked")) {
-  landscape += (2n ** BigInt(banned.parentElement.parentElement.dataset.id));
- }
-
- self.localStorage.setItem("banned-landscape", landscape.toString());
-});
-
 document.getElementById("icons-license").addEventListener("toggle", async function () {
  this.lastElementChild.textContent = await (await fetch("./Apache%20License%20of%20Google%20Matrial%20Icons.txt")).text();
 }, { once: true });
-
-for (let banned = BigInt(self.localStorage.getItem("banned-kingdom") ?? 0), id = 0; banned !== 0n; banned >>= 1n, id++) {
- if (banned & 1n) {
-  const target = document.querySelector(`input[type="radio"][value="ban"][name="kingdom-${id}"]:not(:checked)`);
-  target.checked = true;
-  target.dispatchEvent(new Event("change"));
- }
-}
-
-for (let banned = BigInt(self.localStorage.getItem("banned-landscape") ?? 0), id = 0; banned !== 0n; banned >>= 1n, id++) {
- if (banned & 1n) {
-  const target = document.querySelector(`input[type="radio"][value="ban"][name="landscape-${id}"]:not(:checked)`);
-  target.checked = true;
-  target.dispatchEvent(new Event("change"));
- }
-}
