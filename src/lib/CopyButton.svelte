@@ -1,16 +1,20 @@
 <script lang="ts">
+ import { browser } from "$app/environment";
  import { type Snippet } from "svelte";
+
  let { text, fadeoutMilliseconds = 1000, children }: { text: string; fadeoutMilliseconds?: number; children: Snippet } = $props();
- const resultText = window?.navigator?.clipboard == null ? "コピー失敗" : "コピー完了";
+ let resultText: string = $derived.by(() => (browser && self?.navigator?.clipboard != null ? "コピー成功" : "コピー失敗"));
  let dom: HTMLSpanElement;
- function onclick() {
-  dom.classList.remove("hidden");
-  window?.navigator?.clipboard?.writeText(text)?.then(() => {
-   setTimeout(() => {
-    dom.classList.add("hidden");
-   }, fadeoutMilliseconds);
-  });
- }
+ const onclick = () => {
+  if (browser) {
+   dom.classList.remove("hidden");
+   self?.navigator?.clipboard?.writeText(text)?.then(() => {
+    setTimeout(() => {
+     dom.classList.add("hidden");
+    }, fadeoutMilliseconds);
+   });
+  }
+ };
 </script>
 
 <div>
