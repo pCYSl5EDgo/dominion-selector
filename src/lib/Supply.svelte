@@ -190,7 +190,7 @@
 
 {#if supplySettings.kingdomCount > 0}
  <CopyButton text={kingdomCopyText}>
-  <span class="font-weight-bold">王国</span>
+  <span class="font-weight-bold">王国 (クリックしてコピー可)</span>
  </CopyButton>
  <ul class="grid2">
   {#each kingdomIds as id}
@@ -205,7 +205,7 @@
 
 {#if supplySettings.normalLandscapeCount > 0}
  <CopyButton text={landscapeCopyText}>
-  <span class="font-weight-bold">ランドスケープ</span>
+  <span class="font-weight-bold">ランドスケープ (クリックしてコピー可)</span>
  </CopyButton>
  <ul class="grid3">
   {#each landscapeIds as id}
