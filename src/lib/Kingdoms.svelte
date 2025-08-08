@@ -4,6 +4,7 @@
  import { dominion } from "./dominion.svelte";
  import { untrack } from "svelte";
  import { supplySettings } from "./SupplySettings.svelte";
+ import { globalSettings } from "./globalSettings.svelte";
 
  $effect(() => {
   for (const expansion of dominion.expansions) {
@@ -65,11 +66,13 @@
   <ul>
    {#each expansion.kingdoms as kingdomId}
     {@const kingdom = dominion.kingdoms[kingdomId]}
-    <li>
-     <Radios hasOn={true} bind:isChecked={kingdom.kingdomStatus}>
-      <span class="font-weight-bold">{kingdom.japanese}</span>
-     </Radios>
-    </li>
+    {#if globalSettings.shouldDisplayBannedItems || kingdom.kingdomStatus !== "ban"}
+     <li>
+      <Radios hasOn={true} bind:isChecked={kingdom.kingdomStatus}>
+       <span class="font-weight-bold">{kingdom.japanese}</span>
+      </Radios>
+     </li>
+    {/if}
    {/each}
   </ul>
  </ButtonRadioDetails>

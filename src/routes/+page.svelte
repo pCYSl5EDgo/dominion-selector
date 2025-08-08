@@ -2,8 +2,12 @@
  import Kingdoms from "$lib/Kingdoms.svelte";
  import Landscapes from "$lib/Landscapes.svelte";
  import Supply from "$lib/Supply.svelte";
- import Settings from "./Settings.svelte";
+ import Settings from "$lib/Settings.svelte";
 </script>
+
+<svelte:head>
+ <title>どみにおん・せれくた</title>
+</svelte:head>
 
 <main>
  <label>
@@ -17,6 +21,10 @@
  <label>
   <input id="maintab-supply" type="radio" name="maintab" />
   サプライ
+ </label>
+ <label>
+  <input id="maintab-settings" type="radio" name="maintab" />
+  設定
  </label>
 
  <div id="kingdoms">
@@ -111,25 +119,20 @@
   margin-inline: auto;
   max-width: 800px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 1ex;
-  row-gap: 0.5lh;
+  row-gap: 0.4lh;
  }
 
  #kingdoms,
- #landscapes {
-  display: none;
-  grid-column: 1/-1;
-  grid-template-columns: auto repeat(3, 1fr);
-  width: stretch;
-  column-gap: 1ex;
-  row-gap: 0.5lh;
- }
-
+ #landscapes,
+ #settings,
  #supply {
   display: none;
   grid-column: 1/-1;
   width: stretch;
+  column-gap: 1ex;
+  row-gap: 0.4lh;
   flex-direction: column;
   gap: 0.4lh;
  }
@@ -137,9 +140,11 @@
  label:has(#maintab-kingdom:checked) ~ #kingdoms,
  label:has(#maintab-landscape:checked) ~ #landscapes {
   display: grid;
+  grid-template-columns: auto repeat(3, 1fr);
  }
 
- label:has(#maintab-supply:checked) ~ #supply {
+ label:has(#maintab-supply:checked) ~ #supply,
+ label:has(#maintab-settings:checked) ~ #settings {
   display: flex;
  }
 </style>

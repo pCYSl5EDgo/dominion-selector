@@ -4,6 +4,7 @@
  import { dominion, ids } from "./dominion.svelte";
  import { supplySettings } from "./SupplySettings.svelte";
  import { untrack } from "svelte";
+ import { globalSettings } from "./globalSettings.svelte";
  $effect(() => {
   for (const landscapeKind of dominion.landscapeKinds) {
    const status = landscapeKind.landscapeStatus;
@@ -155,22 +156,38 @@
 </script>
 
 <div>
- <label>
-  <span>ランドスケープ選出枚数</span>
-  <input id="supply-normal-landscape-count" type="number" min={landscape.min} max={landscape.max} step="1" bind:value={supplySettings.normalLandscapeCount} />
- </label>
- <label>
-  <span>習性選出枚数</span>
-  <input id="supply-way-count" type="number" min={way.min} max={way.max} step="1" bind:value={supplySettings.wayMaxCount} />
- </label>
- <label>
-  <span>同盟選出枚数</span>
-  <input id="supply-ally-count" type="number" min={ally.min} max={ally.max} step="1" bind:value={supplySettings.allyCount} />
- </label>
- <label>
-  <span>予言選出枚数</span>
-  <input id="prophecy-way-count" type="number" min={prophecy.min} max={prophecy.max} step="1" bind:value={supplySettings.prophecyCount} />
- </label>
+ {#if landscape.min <= landscape.max && landscape.max > 0}
+  <label>
+   <span>ランドスケープ選出枚数</span>
+   <input
+    id="supply-normal-landscape-count"
+    type="number"
+    min={landscape.min}
+    max={landscape.max}
+    step="1"
+    bind:value={supplySettings.normalLandscapeCount}
+    disabled={landscape.min == landscape.max}
+   />
+  </label>
+ {/if}
+ {#if way.min <= way.max && way.max > 0}
+  <label>
+   <span>習性選出枚数</span>
+   <input id="supply-way-count" type="number" min={way.min} max={way.max} step="1" bind:value={supplySettings.wayMaxCount} disabled={way.min == way.max} />
+  </label>
+ {/if}
+ {#if ally.min <= ally.max && ally.max > 0}
+  <label>
+   <span>同盟選出枚数</span>
+   <input id="supply-ally-count" type="number" min={ally.min} max={ally.max} step="1" bind:value={supplySettings.allyCount} disabled={ally.min == ally.max} />
+  </label>
+ {/if}
+ {#if prophecy.min <= prophecy.max && prophecy.max > 0}
+  <label>
+   <span>予言選出枚数</span>
+   <input id="prophecy-way-count" type="number" min={prophecy.min} max={prophecy.max} step="1" bind:value={supplySettings.prophecyCount} disabled={prophecy.min == prophecy.max} />
+  </label>
+ {/if}
 </div>
 
 {#each dominion.landscapeKinds as kind}
@@ -180,11 +197,13 @@
    <ul class="status4">
     {#each kind.landscapes as landscapeId}
      {@const landscape = dominion.landscapes[landscapeId]}
-     <li>
-      <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus}>
-       <span class="font-weight-bold">{landscape.japanese}</span>
-      </Radios>
-     </li>
+     {#if globalSettings.shouldDisplayBannedItems || landscape.landscapeStatus !== "ban"}
+      <li>
+       <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus}>
+        <span class="font-weight-bold">{landscape.japanese}</span>
+       </Radios>
+      </li>
+     {/if}
     {/each}
    </ul>
   </ButtonRadioDetails>
@@ -193,22 +212,24 @@
    <ul class="status3">
     {#each kind.expansions as expansionId}
      {@const expansion = dominion.expansions[expansionId]}
-     <li>
-      <ButtonRadioDetails text={expansion.japanese} class={["font-weight-bolder"]} bind:isChecked={expansion.landscapeStatus} name="expansion">
-       <ul class="status4">
-        {#each kind.landscapes as landscapeId}
-         {@const landscape = dominion.landscapes[landscapeId]}
-         {#if landscape.expansionId === expansionId}
-          <li>
-           <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus}>
-            <span class="font-weight-bold">{landscape.japanese}</span>
-           </Radios>
-          </li>
-         {/if}
-        {/each}
-       </ul>
-      </ButtonRadioDetails>
-     </li>
+     {#if globalSettings.shouldDisplayBannedItems || expansion.landscapeStatus !== "ban"}
+      <li>
+       <ButtonRadioDetails text={expansion.japanese} class={["font-weight-bolder"]} bind:isChecked={expansion.landscapeStatus} name="expansion">
+        <ul class="status4">
+         {#each kind.landscapes as landscapeId}
+          {@const landscape = dominion.landscapes[landscapeId]}
+          {#if landscape.expansionId === expansionId && (globalSettings.shouldDisplayBannedItems || landscape.landscapeStatus !== "ban")}
+           <li>
+            <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus}>
+             <span class="font-weight-bold">{landscape.japanese}</span>
+            </Radios>
+           </li>
+          {/if}
+         {/each}
+        </ul>
+       </ButtonRadioDetails>
+      </li>
+     {/if}
     {/each}
    </ul>
   </ButtonRadioDetails>

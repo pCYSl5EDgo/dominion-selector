@@ -1,6 +1,7 @@
 <script lang="ts">
  import type { Snippet } from "svelte";
  import Radios, { type RadioStatus3 } from "./Radios.svelte";
+ import { globalSettings } from "./globalSettings.svelte";
 
  let {
   text,
@@ -24,15 +25,17 @@
  }
 </script>
 
-<Radios bind:isChecked>
- <button type="button" {onclick} class={cls}>
-  {text}
- </button>
-</Radios>
-<details bind:this={dom} {name}>
- <summary></summary>
- {@render children?.()}
-</details>
+{#if globalSettings.shouldDisplayBannedItems || isChecked !== "ban"}
+ <Radios bind:isChecked>
+  <button type="button" {onclick} class={cls}>
+   {text}
+  </button>
+ </Radios>
+ <details bind:this={dom} {name}>
+  <summary></summary>
+  {@render children?.()}
+ </details>
+{/if}
 
 <style>
  details {
