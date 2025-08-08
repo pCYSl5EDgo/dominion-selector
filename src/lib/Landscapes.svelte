@@ -6,28 +6,31 @@
  import { untrack } from "svelte";
  import { globalSettings } from "./globalSettings.svelte";
  $effect(() => {
-  for (const landscapeKind of dominion.landscapeKinds) {
-   const status = landscapeKind.landscapeStatus;
+  for (const kind of dominion.landscapeKinds) {
+   const status = kind.landscapeStatus;
    if (status === "ban") {
     untrack(() => {
-     for (const id of landscapeKind.expansions) {
+     for (const id of kind.expansions) {
       dominion.expansions[id].landscapeStatus = status;
      }
-     for (const id of landscapeKind.landscapes) {
-      dominion.landscapes[id].landscapeStatus = status;
+     for (const id of kind.landscapes) {
+      const item = dominion.landscapes[id];
+      if (item.kindId === kind.id) {
+       item.landscapeStatus = status;
+      }
      }
     });
    } else {
     untrack(() => {
-     for (const id of landscapeKind.expansions) {
+     for (const id of kind.expansions) {
       const item = dominion.expansions[id];
       if (item.landscapeStatus !== "ban") {
        item.landscapeStatus = status;
       }
      }
-     for (const id of landscapeKind.landscapes) {
+     for (const id of kind.landscapes) {
       const item = dominion.landscapes[id];
-      if (item.landscapeStatus !== "ban") {
+      if (item.kindId === kind.id && item.landscapeStatus !== "ban") {
        item.landscapeStatus = status;
       }
      }
@@ -35,27 +38,32 @@
    }
   }
  });
- $effect(() => {
-  for (const expansion of dominion.expansions) {
-   const status = expansion.landscapeStatus;
-   if (status === "ban") {
-    untrack(() => {
-     for (const id of expansion.landscapes) {
-      dominion.landscapes[id].landscapeStatus = status;
-     }
-    });
-   } else {
-    untrack(() => {
+
+ for (const kind of dominion.landscapeKinds) {
+  for (const expansionId of kind.expansions) {
+   const expansion = dominion.expansions[expansionId];
+   $effect(() => {
+    const status = expansion.landscapeStatus;
+    if (status === "ban") {
+     untrack(() => {
+      for (const id of expansion.landscapes) {
+       const item = dominion.landscapes[id];
+       if (item.kindId === kind.id) {
+        item.landscapeStatus = "ban";
+       }
+      }
+     });
+    } else {
      for (const id of expansion.landscapes) {
       const item = dominion.landscapes[id];
-      if (item.landscapeStatus !== "ban") {
+      if (item.kindId === kind.id && item.landscapeStatus !== "ban") {
        item.landscapeStatus = status;
       }
      }
-    });
-   }
+    }
+   });
   }
- });
+ }
 
  let landscape = $derived.by(() => {
   let max = 0,
