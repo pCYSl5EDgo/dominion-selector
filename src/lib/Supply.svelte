@@ -57,7 +57,7 @@
 
   const selectedIds: number[] = [];
   while (supplySettings.kingdomCount > kingdomIds.length) {
-   selectRandomIds(self.structuredClone(candidates), selectedIds, supplySettings.kingdomCount - kingdomIds.length);
+   selectRandomIds(window.structuredClone(candidates), selectedIds, supplySettings.kingdomCount - kingdomIds.length);
    if (isValidKingdoms(kingdomIds, selectedIds)) {
     kingdomIds.push(...selectedIds);
    }
@@ -95,7 +95,7 @@
 
   const selectedIds: number[] = [];
   while (supplySettings.normalLandscapeCount > landscapeIds.length) {
-   selectRandomIds(self.structuredClone(candidates), selectedIds, supplySettings.normalLandscapeCount - landscapeIds.length);
+   selectRandomIds(window.structuredClone(candidates), selectedIds, supplySettings.normalLandscapeCount - landscapeIds.length);
    if (isValidNormalLandscapes(landscapeIds, selectedIds)) {
     landscapeIds.push(...selectedIds);
    }
@@ -114,7 +114,7 @@
 
   const selectedIds: number[] = [];
   while (supplySettings.allyCount > allyIds.length) {
-   selectRandomIds(self.structuredClone(candidates), selectedIds, supplySettings.allyCount - allyIds.length);
+   selectRandomIds(window.structuredClone(candidates), selectedIds, supplySettings.allyCount - allyIds.length);
    if (isValidAllies(allyIds, selectedIds)) {
     allyIds.push(...selectedIds);
    }
@@ -133,7 +133,7 @@
 
   const selectedIds: number[] = [];
   while (supplySettings.prophecyCount > prophecyIds.length) {
-   selectRandomIds(self.structuredClone(candidates), selectedIds, supplySettings.prophecyCount - prophecyIds.length);
+   selectRandomIds(window.structuredClone(candidates), selectedIds, supplySettings.prophecyCount - prophecyIds.length);
    if (isValidAllies(prophecyIds, selectedIds)) {
     prophecyIds.push(...selectedIds);
    }

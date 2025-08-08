@@ -1,11 +1,11 @@
 <script lang="ts">
  import { type Snippet } from "svelte";
  let { text, fadeoutMilliseconds = 1000, children }: { text: string; fadeoutMilliseconds?: number; children: Snippet } = $props();
- const resultText = self?.navigator?.clipboard == null ? "コピー失敗" : "コピー完了";
+ const resultText = window?.navigator?.clipboard == null ? "コピー失敗" : "コピー完了";
  let dom: HTMLSpanElement;
  function onclick() {
   dom.classList.remove("hidden");
-  self?.navigator?.clipboard?.writeText(text)?.then(() => {
+  window?.navigator?.clipboard?.writeText(text)?.then(() => {
    setTimeout(() => {
     dom.classList.add("hidden");
    }, fadeoutMilliseconds);

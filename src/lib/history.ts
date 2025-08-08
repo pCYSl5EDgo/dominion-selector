@@ -7,7 +7,7 @@ export type BannedItem = {
  landscapes: number[];
 }
 
-const openRequest = self.indexedDB.open("history", 1);
+const openRequest = window.indexedDB.open("history", 1);
 openRequest.addEventListener("blocked", reject);
 openRequest.addEventListener("error", reject);
 const bannedItemObjectStoreName = "banned-item";
