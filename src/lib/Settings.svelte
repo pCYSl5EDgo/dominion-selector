@@ -1,5 +1,4 @@
 <script lang="ts">
- import { browser } from "$app/environment";
  import { dominion } from "./dominion.svelte";
  import { globalSettings } from "./globalSettings.svelte";
  let separatorKind: "crlf" | "space" | "comma" | "text" = $state("crlf");
@@ -22,31 +21,49 @@
   }
  });
 
- import { dbPromise, getAutoBannedItemAsync } from "./history";
+ function resetAllBannedItem() {
+  for (const item of dominion.expansions) {
+   item.kingdomStatus = "random";
+   item.landscapeStatus = "random";
+  }
 
- async function initializeAsync() {
-  const db = await dbPromise;
-  const bannedItem = await getAutoBannedItemAsync(db);
+  for (const item of dominion.kingdoms) {
+   item.kingdomStatus = "random";
+  }
+
+  for (const item of dominion.landscapeKinds) {
+   item.landscapeStatus = "random";
+  }
+
+  for (const item of dominion.landscapes) {
+   item.landscapeStatus = "random";
+  }
  }
- if (browser) {
-  initializeAsync();
+
+ async function saveBannedItemAsync(this: HTMLButtonElement) {
+  this.disabled = true;
  }
 </script>
 
-<fieldset>
- <legend>禁止された要素の表示</legend>
- <label>
-  <input type="radio" name="global-settings-should-display-banned-item" value={true} bind:group={globalSettings.shouldDisplayBannedItems} checked />
-  <span>表示</span>
- </label>
- <label>
-  <input type="radio" name="global-settings-should-display-banned-item" value={false} bind:group={globalSettings.shouldDisplayBannedItems} />
-  <span>非表示</span>
- </label>
-</fieldset>
+<div>
+ <h2>禁止</h2>
+ <button type="button" onclick={resetAllBannedItem}>禁止要素全解除</button>
+ <button type="button" onclick={saveBannedItemAsync}>禁止保存</button>
+ <div>
+  <span>禁止された要素の表示</span>
+  <label>
+   <input type="radio" name="global-settings-should-display-banned-item" value={true} bind:group={globalSettings.shouldDisplayBannedItems} checked />
+   <span>表示</span>
+  </label>
+  <label>
+   <input type="radio" name="global-settings-should-display-banned-item" value={false} bind:group={globalSettings.shouldDisplayBannedItems} />
+   <span>非表示</span>
+  </label>
+ </div>
+</div>
 
-<fieldset>
- <legend>コピーボタンの区切り文字</legend>
+<div>
+ <h2>コピーボタンの区切り文字</h2>
  <label>
   <input type="radio" name="global-settings-copy-separator" value="crlf" bind:group={separatorKind} checked />
   <span>改行</span>
@@ -64,7 +81,7 @@
   <span>任意文字列</span>
  </label>
  <input type="text" name="global-settings-copy-separator-text" bind:value={separatorText} />
-</fieldset>
+</div>
 
 <style>
  label:has(> input[value="text"]) + input[type="text"] {

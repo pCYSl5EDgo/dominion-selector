@@ -11,7 +11,12 @@
    if (status === "ban") {
     untrack(() => {
      for (const id of kind.expansions) {
-      dominion.expansions[id].landscapeStatus = status;
+      for (const pair of dominion.expansions[id].landscapeStatus) {
+       if (pair.kindId === id) {
+        pair.status = status;
+        break;
+       }
+      }
      }
      for (const id of kind.landscapes) {
       const item = dominion.landscapes[id];
@@ -24,8 +29,11 @@
     untrack(() => {
      for (const id of kind.expansions) {
       const item = dominion.expansions[id];
-      if (item.landscapeStatus !== "ban") {
-       item.landscapeStatus = status;
+      for (const pair of item.landscapeStatus) {
+       if (pair.kindId === kind.id && pair.status !== "ban") {
+        pair.status = status;
+        break;
+       }
       }
      }
      for (const id of kind.landscapes) {
@@ -39,33 +47,7 @@
   }
  });
 
- for (const kind of dominion.landscapeKinds) {
-  for (const expansionId of kind.expansions) {
-   const expansion = dominion.expansions[expansionId];
-   $effect(() => {
-    const status = expansion.landscapeStatus;
-    if (status === "ban") {
-     untrack(() => {
-      for (const id of expansion.landscapes) {
-       const item = dominion.landscapes[id];
-       if (item.kindId === kind.id) {
-        item.landscapeStatus = "ban";
-       }
-      }
-     });
-    } else {
-     for (const id of expansion.landscapes) {
-      const item = dominion.landscapes[id];
-      if (item.kindId === kind.id && item.landscapeStatus !== "ban") {
-       item.landscapeStatus = status;
-      }
-     }
-    }
-   });
-  }
- }
-
- let landscape = $derived.by(() => {
+ let landscapeSelectionCountMinMax = $derived.by(() => {
   let max = 0,
    min = 0;
   for (const item of dominion.landscapes) {
@@ -84,7 +66,7 @@
 
   return { max, min };
  });
- let way = $derived.by(() => {
+ let waySelectionCountMinMax = $derived.by(() => {
   let max = 0,
    min = 0;
   for (const id of dominion.landscapeKinds[ids.lanscapeKinds.way].landscapes) {
@@ -100,7 +82,7 @@
   }
   return { max, min };
  });
- let ally = $derived.by(() => {
+ let allySelectionCountMinMax = $derived.by(() => {
   let max = 0,
    min = 0;
   for (const id of dominion.landscapeKinds[ids.lanscapeKinds.ally].landscapes) {
@@ -116,7 +98,7 @@
   }
   return { max, min };
  });
- let prophecy = $derived.by(() => {
+ let prophecySelectionCountMinMax = $derived.by(() => {
   let max = 0,
    min = 0;
   for (const id of dominion.landscapeKinds[ids.lanscapeKinds.prophecy].landscapes) {
@@ -133,67 +115,90 @@
   return { max, min };
  });
  $effect(() => {
-  if (supplySettings.normalLandscapeCount > landscape.max) {
-   supplySettings.normalLandscapeCount = landscape.max;
-  } else if (supplySettings.normalLandscapeCount < landscape.min) {
-   supplySettings.normalLandscapeCount = landscape.min;
-  }
-  $inspect(supplySettings.normalLandscapeCount, landscape.max).with(console.debug);
- });
- $effect(() => {
-  if (supplySettings.wayMaxCount > way.max) {
-   supplySettings.wayMaxCount = way.max;
-  } else if (supplySettings.wayMaxCount < way.min) {
-   supplySettings.wayMaxCount = way.min;
+  if (supplySettings.normalLandscapeCount > landscapeSelectionCountMinMax.max) {
+   supplySettings.normalLandscapeCount = landscapeSelectionCountMinMax.max;
+  } else if (supplySettings.normalLandscapeCount < landscapeSelectionCountMinMax.min) {
+   supplySettings.normalLandscapeCount = landscapeSelectionCountMinMax.min;
   }
  });
  $effect(() => {
-  if (supplySettings.allyCount > ally.max) {
-   supplySettings.allyCount = ally.max;
-  } else if (supplySettings.allyCount < ally.min) {
-   supplySettings.allyCount = ally.min;
+  if (supplySettings.wayMaxCount > waySelectionCountMinMax.max) {
+   supplySettings.wayMaxCount = waySelectionCountMinMax.max;
+  } else if (supplySettings.wayMaxCount < waySelectionCountMinMax.min) {
+   supplySettings.wayMaxCount = waySelectionCountMinMax.min;
   }
  });
  $effect(() => {
-  if (supplySettings.prophecyCount > prophecy.max) {
-   supplySettings.prophecyCount = prophecy.max;
-  } else if (supplySettings.prophecyCount < prophecy.min) {
-   supplySettings.prophecyCount = prophecy.min;
+  if (supplySettings.allyCount > allySelectionCountMinMax.max) {
+   supplySettings.allyCount = allySelectionCountMinMax.max;
+  } else if (supplySettings.allyCount < allySelectionCountMinMax.min) {
+   supplySettings.allyCount = allySelectionCountMinMax.min;
+  }
+ });
+ $effect(() => {
+  if (supplySettings.prophecyCount > prophecySelectionCountMinMax.max) {
+   supplySettings.prophecyCount = prophecySelectionCountMinMax.max;
+  } else if (supplySettings.prophecyCount < prophecySelectionCountMinMax.min) {
+   supplySettings.prophecyCount = prophecySelectionCountMinMax.min;
   }
  });
 </script>
 
 <div>
- {#if landscape.min <= landscape.max && landscape.max > 0}
+ {#if landscapeSelectionCountMinMax.min <= landscapeSelectionCountMinMax.max && landscapeSelectionCountMinMax.max > 0}
   <label>
    <span>ランドスケープ選出枚数</span>
    <input
     id="supply-normal-landscape-count"
     type="number"
-    min={landscape.min}
-    max={landscape.max}
+    min={landscapeSelectionCountMinMax.min}
+    max={landscapeSelectionCountMinMax.max}
     step="1"
     bind:value={supplySettings.normalLandscapeCount}
-    disabled={landscape.min == landscape.max}
+    disabled={landscapeSelectionCountMinMax.min == landscapeSelectionCountMinMax.max}
    />
   </label>
  {/if}
- {#if way.min <= way.max && way.max > 0}
+ {#if waySelectionCountMinMax.min <= waySelectionCountMinMax.max && waySelectionCountMinMax.max > 0}
   <label>
    <span>習性選出枚数</span>
-   <input id="supply-way-count" type="number" min={way.min} max={way.max} step="1" bind:value={supplySettings.wayMaxCount} disabled={way.min == way.max} />
+   <input
+    id="supply-way-count"
+    type="number"
+    min={waySelectionCountMinMax.min}
+    max={waySelectionCountMinMax.max}
+    step="1"
+    bind:value={supplySettings.wayMaxCount}
+    disabled={waySelectionCountMinMax.min == waySelectionCountMinMax.max}
+   />
   </label>
  {/if}
- {#if ally.min <= ally.max && ally.max > 0}
+ {#if allySelectionCountMinMax.min <= allySelectionCountMinMax.max && allySelectionCountMinMax.max > 0}
   <label>
    <span>同盟選出枚数</span>
-   <input id="supply-ally-count" type="number" min={ally.min} max={ally.max} step="1" bind:value={supplySettings.allyCount} disabled={ally.min == ally.max} />
+   <input
+    id="supply-ally-count"
+    type="number"
+    min={allySelectionCountMinMax.min}
+    max={allySelectionCountMinMax.max}
+    step="1"
+    bind:value={supplySettings.allyCount}
+    disabled={allySelectionCountMinMax.min == allySelectionCountMinMax.max}
+   />
   </label>
  {/if}
- {#if prophecy.min <= prophecy.max && prophecy.max > 0}
+ {#if prophecySelectionCountMinMax.min <= prophecySelectionCountMinMax.max && prophecySelectionCountMinMax.max > 0}
   <label>
    <span>予言選出枚数</span>
-   <input id="prophecy-way-count" type="number" min={prophecy.min} max={prophecy.max} step="1" bind:value={supplySettings.prophecyCount} disabled={prophecy.min == prophecy.max} />
+   <input
+    id="prophecy-way-count"
+    type="number"
+    min={prophecySelectionCountMinMax.min}
+    max={prophecySelectionCountMinMax.max}
+    step="1"
+    bind:value={supplySettings.prophecyCount}
+    disabled={prophecySelectionCountMinMax.min == prophecySelectionCountMinMax.max}
+   />
   </label>
  {/if}
 </div>
@@ -220,15 +225,10 @@
    <ul class="status3">
     {#each kind.expansions as expansionId}
      {@const expansion = dominion.expansions[expansionId]}
-     {#if globalSettings.shouldDisplayBannedItems || expansion.landscapeStatus !== "ban"}
+     {@const pair = expansion.landscapeStatus.find((x) => x.kindId === kind.id)}
+     {#if pair && (globalSettings.shouldDisplayBannedItems || pair.status !== "ban")}
       <li>
-       <ButtonRadioDetails
-        text={expansion.japanese}
-        class={["font-weight-bolder"]}
-        bind:isChecked={expansion.landscapeStatus}
-        name="expansion"
-        disabled={kind.landscapeStatus === "ban"}
-       >
+       <ButtonRadioDetails text={expansion.japanese} class={["font-weight-bolder"]} bind:isChecked={pair.status} name="expansion" disabled={kind.landscapeStatus === "ban"}>
         <ul class="status4">
          {#each kind.landscapes as landscapeId}
           {@const landscape = dominion.landscapes[landscapeId]}

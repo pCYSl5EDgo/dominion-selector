@@ -28,7 +28,7 @@
   }
  });
 
- let kingdom = $derived.by(() => {
+ let kingdomSelectionCountMinMax = $derived.by(() => {
   let min = 0,
    max = 0;
   for (const kingdom of dominion.kingdoms) {
@@ -46,10 +46,10 @@
  });
 
  $effect(() => {
-  if (supplySettings.kingdomCount > kingdom.max) {
-   supplySettings.kingdomCount = kingdom.max;
-  } else if (supplySettings.kingdomCount < kingdom.min) {
-   supplySettings.kingdomCount = kingdom.min;
+  if (supplySettings.kingdomCount > kingdomSelectionCountMinMax.max) {
+   supplySettings.kingdomCount = kingdomSelectionCountMinMax.max;
+  } else if (supplySettings.kingdomCount < kingdomSelectionCountMinMax.min) {
+   supplySettings.kingdomCount = kingdomSelectionCountMinMax.min;
   }
  });
 </script>
@@ -57,7 +57,7 @@
 <div>
  <label>
   <span>王国選出枚数</span>
-  <input id="supply-kingdom-count" type="number" min={kingdom.min} max={kingdom.max} step="1" bind:value={supplySettings.kingdomCount} />
+  <input id="supply-kingdom-count" type="number" min={kingdomSelectionCountMinMax.min} max={kingdomSelectionCountMinMax.max} step="1" bind:value={supplySettings.kingdomCount} />
  </label>
 </div>
 

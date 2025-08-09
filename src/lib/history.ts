@@ -8,27 +8,23 @@ export type BannedItem = {
  };
  landscapes: {
   kinds: {
-   expansions: number[];
+   expansions: { kindId: number, expansionId: number }[];
    ids: number[];
   };
   ids: number[];
  };
 }
 
-let privateDbPromise: Promise<IDBDatabase>;
-let getAutoBannedItem: (db: IDBDatabase, abortSignal?: AbortSignal) => Promise<BannedItem>;
-let saveAutoBannedItem: (db: IDBDatabase, item: BannedItem, abortSignal?: AbortSignal) => Promise<void>;
+const abort = "abort";
+const error = "error";
+const success = "success";
+const readonly = "readonly";
+const readwrite = "readwrite";
+const bannedItemObjectStoreName = "banned-item";
 
+let privateDbPromise: Promise<IDBDatabase> | null;
 if (browser) {
- const abort = "abort";
- const error = "error";
- const success = "success";
- const readonly = "readonly";
- const readwrite = "readwrite";
- const bannedItemObjectStoreName = "banned-item";
-
  const { promise, resolve, reject } = Promise.withResolvers();
-
  const openRequest = self.indexedDB.open("history", 1);
  openRequest.addEventListener("blocked", reject);
  openRequest.addEventListener(error, reject);
@@ -36,38 +32,38 @@ if (browser) {
   const db = (ev.target as any).result as IDBDatabase;
   db.createObjectStore(bannedItemObjectStoreName, { keyPath: "id" });
  });
-
  openRequest.addEventListener(success, (ev) => resolve((ev.target as any).result as IDBDatabase));
-
  privateDbPromise = promise as Promise<IDBDatabase>;
- getAutoBannedItem = (db: IDBDatabase, abortSignal?: AbortSignal) => {
-  const { promise, resolve, reject } = Promise.withResolvers();
-  abortSignal?.addEventListener(abort, reject);
-  const transaction = db.transaction(bannedItemObjectStoreName, readonly);
-  transaction.addEventListener(abort, reject);
-  transaction.addEventListener(error, reject);
-  const store = transaction.objectStore(bannedItemObjectStoreName);
-
-  const request = store.get(-1);
-  request.addEventListener(error, reject);
-  request.addEventListener(success, function (this: IDBRequest<BannedItem>) {
-   resolve(this.result);
-  });
-  return promise as Promise<BannedItem>;
- };
-
- saveAutoBannedItem = (db: IDBDatabase, item: BannedItem, abortSignal?: AbortSignal) => {
-  const { promise, resolve, reject } = Promise.withResolvers();
-  abortSignal?.addEventListener(abort, reject);
-  return promise as Promise<void>;
- }
 }
 else {
- privateDbPromise = null!;
- getAutoBannedItem = null!;
- saveAutoBannedItem = null!;
+ privateDbPromise = null;
 }
 
-export const dbPromise = privateDbPromise;
-export const getAutoBannedItemAsync = getAutoBannedItem;
-export const saveAutoBannedItemAsync = saveAutoBannedItem;
+export const db = privateDbPromise == null ? null : await privateDbPromise;
+
+export const getAutoBannedItemAsync = (db: IDBDatabase, abortSignal?: AbortSignal) => {
+ const { promise, resolve, reject } = Promise.withResolvers();
+ abortSignal?.addEventListener(abort, reject);
+ const transaction = db.transaction(bannedItemObjectStoreName, readonly);
+ transaction.addEventListener(abort, reject);
+ transaction.addEventListener(error, reject);
+ const store = transaction.objectStore(bannedItemObjectStoreName);
+
+ const request = store.get(-1);
+ request.addEventListener(error, reject);
+ request.addEventListener(success, function (this: IDBRequest<BannedItem>) {
+  resolve(this.result);
+ });
+ return promise as Promise<BannedItem | undefined>;
+};
+
+export const saveAutoBannedItemAsync = (db: IDBDatabase, item: BannedItem, abortSignal?: AbortSignal) => {
+ const { promise, resolve, reject } = Promise.withResolvers();
+ abortSignal?.addEventListener(abort, reject);
+ const transaction = db.transaction(bannedItemObjectStoreName, readwrite);
+ transaction.addEventListener(abort, reject);
+ transaction.addEventListener(error, reject);
+ transaction.addEventListener("complete", resolve);
+ transaction.objectStore(bannedItemObjectStoreName).put(item, -1).addEventListener(error, reject);
+ return promise as Promise<void>;
+}
