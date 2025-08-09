@@ -207,7 +207,7 @@
      {@const landscape = dominion.landscapes[landscapeId]}
      {#if globalSettings.shouldDisplayBannedItems || landscape.landscapeStatus !== "ban"}
       <li>
-       <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus}>
+       <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus} disabled={kind.landscapeStatus === "ban"}>
         <span class="font-weight-bold">{landscape.japanese}</span>
        </Radios>
       </li>
@@ -222,13 +222,19 @@
      {@const expansion = dominion.expansions[expansionId]}
      {#if globalSettings.shouldDisplayBannedItems || expansion.landscapeStatus !== "ban"}
       <li>
-       <ButtonRadioDetails text={expansion.japanese} class={["font-weight-bolder"]} bind:isChecked={expansion.landscapeStatus} name="expansion">
+       <ButtonRadioDetails
+        text={expansion.japanese}
+        class={["font-weight-bolder"]}
+        bind:isChecked={expansion.landscapeStatus}
+        name="expansion"
+        disabled={kind.landscapeStatus === "ban"}
+       >
         <ul class="status4">
          {#each kind.landscapes as landscapeId}
           {@const landscape = dominion.landscapes[landscapeId]}
           {#if landscape.expansionId === expansionId && (globalSettings.shouldDisplayBannedItems || landscape.landscapeStatus !== "ban")}
            <li>
-            <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus}>
+            <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus} disabled={kind.landscapeStatus === "ban"}>
              <span class="font-weight-bold">{landscape.japanese}</span>
             </Radios>
            </li>

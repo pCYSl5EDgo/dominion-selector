@@ -1,4 +1,6 @@
 <script lang="ts">
+ import { browser } from "$app/environment";
+ import { dominion } from "./dominion.svelte";
  import { globalSettings } from "./globalSettings.svelte";
  let separatorKind: "crlf" | "space" | "comma" | "text" = $state("crlf");
  let separatorText = $state("");
@@ -19,6 +21,16 @@
     break;
   }
  });
+
+ import { dbPromise, getAutoBannedItemAsync } from "./history";
+
+ async function initializeAsync() {
+  const db = await dbPromise;
+  const bannedItem = await getAutoBannedItemAsync(db);
+ }
+ if (browser) {
+  initializeAsync();
+ }
 </script>
 
 <fieldset>

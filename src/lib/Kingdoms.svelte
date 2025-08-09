@@ -68,7 +68,7 @@
     {@const kingdom = dominion.kingdoms[kingdomId]}
     {#if globalSettings.shouldDisplayBannedItems || kingdom.kingdomStatus !== "ban"}
      <li>
-      <Radios hasOn={true} bind:isChecked={kingdom.kingdomStatus}>
+      <Radios hasOn={true} bind:isChecked={kingdom.kingdomStatus} disabled={expansion.kingdomStatus === "ban"}>
        <span class="font-weight-bold">{kingdom.japanese}</span>
       </Radios>
      </li>

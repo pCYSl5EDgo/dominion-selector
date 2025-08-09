@@ -8,25 +8,27 @@
   isChecked = $bindable(),
   class: cls = undefined,
   name = undefined,
+  disabled = false,
   children,
  }: {
   text: string;
   isChecked: RadioStatus3;
   class?: string[];
   name?: string;
+  disabled?: boolean;
   children?: Snippet;
  } = $props();
 
- let dom: HTMLDetailsElement;
+ let dom: HTMLDetailsElement | undefined = $state(undefined);
  function onclick(this: HTMLButtonElement) {
-  if ((dom.open = !dom.open)) {
+  if (dom && (dom.open = !dom.open)) {
    this.scrollIntoView({ behavior: "instant", block: "start" });
   }
  }
 </script>
 
 {#if globalSettings.shouldDisplayBannedItems || isChecked !== "ban"}
- <Radios bind:isChecked>
+ <Radios bind:isChecked {disabled}>
   <button type="button" {onclick} class={cls}>
    {text}
   </button>

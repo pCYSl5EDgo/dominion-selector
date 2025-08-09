@@ -12,10 +12,12 @@
  let {
   hasOn = false,
   isChecked = $bindable("random"),
+  disabled = false,
   children = undefined,
  }: {
   hasOn?: boolean;
   isChecked: RadioStatus4;
+  disabled?: boolean;
   children?: Snippet;
  } = $props();
  const name = `Radios-${nameId++}`;
@@ -25,20 +27,20 @@
  {@render children?.()}
  {#if hasOn}
   <label>
-   <input type="radio" value="on" bind:group={isChecked} {name} />
+   <input type="radio" value="on" bind:group={isChecked} {name} {disabled} />
    <span>オン</span>
   </label>
  {/if}
  <label>
-  <input type="radio" value="random" bind:group={isChecked} {name} checked />
+  <input type="radio" value="random" bind:group={isChecked} {name} {disabled} checked />
   <span>ランダム</span>
  </label>
  <label>
-  <input type="radio" value="off" bind:group={isChecked} {name} />
+  <input type="radio" value="off" bind:group={isChecked} {name} {disabled} />
   <span>オフ</span>
  </label>
  <label>
-  <input type="radio" value="ban" bind:group={isChecked} {name} />
+  <input type="radio" value="ban" bind:group={isChecked} {name} {disabled} />
   <span>禁止</span>
  </label>
 {/if}
