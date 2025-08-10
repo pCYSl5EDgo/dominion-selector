@@ -1,8 +1,9 @@
 <script lang="ts" module>
  import Kingdoms from "$lib/Kingdoms.svelte";
  import Landscapes from "$lib/Landscapes.svelte";
- import Supply from "$lib/Supply.svelte";
+ import Supply from "../lib/Supply.svelte";
  import Settings from "$lib/Settings.svelte";
+ import { assets } from "$app/paths";
 </script>
 
 <svelte:head>
@@ -18,14 +19,8 @@
   <input id="maintab-landscape" type="radio" name="maintab" />
   ランドスケープ
  </label>
- <label>
-  <input id="maintab-supply" type="radio" name="maintab" />
-  サプライ
- </label>
- <label>
-  <input id="maintab-settings" type="radio" name="maintab" />
-  設定
- </label>
+ <button type="button" popovertarget="supply">サプライ</button>
+ <button type="button" popovertarget="settings"><span>設定</span><svg width="24" height="24"><use href={`${assets}/icons.svg#settings`}></use></svg></button>
 
  <div id="kingdoms">
   <Kingdoms />
@@ -35,11 +30,11 @@
   <Landscapes />
  </div>
 
- <div id="supply">
+ <div id="supply" popover>
   <Supply />
  </div>
 
- <div id="settings">
+ <div id="settings" popover>
   <Settings />
  </div>
 </main>
@@ -101,6 +96,10 @@
    box-sizing: border-box;
    padding: 4px;
 
+   > span + svg {
+    vertical-align: sub;
+   }
+
    &:hover {
     cursor: pointer;
    }
@@ -121,6 +120,17 @@
   .font-weight-bold {
    font-weight: 500;
   }
+
+  div[popover] {
+   max-width: 780px;
+   width: stretch;
+   box-sizing: border-box;
+   margin-block: 2lh;
+   margin-inline: auto;
+   &::backdrop {
+    background-color: #8886;
+   }
+  }
  }
 
  main {
@@ -133,10 +143,17 @@
   row-gap: 0.4lh;
  }
 
- #kingdoms,
- #landscapes,
- #settings,
  #supply {
+  flex-direction: column;
+  gap: 0.4lh;
+
+  &:popover-open {
+   display: flex;
+  }
+ }
+
+ #kingdoms,
+ #landscapes {
   display: none;
   grid-column: 1/-1;
   width: stretch;
@@ -150,10 +167,5 @@
  label:has(#maintab-landscape:checked) ~ #landscapes {
   display: grid;
   grid-template-columns: auto repeat(3, 1fr);
- }
-
- label:has(#maintab-supply:checked) ~ #supply,
- label:has(#maintab-settings:checked) ~ #settings {
-  display: flex;
  }
 </style>

@@ -1,5 +1,6 @@
 <script lang="ts">
  import { browser } from "$app/environment";
+ import { assets } from "$app/paths";
  import { type Snippet } from "svelte";
 
  let { text, fadeoutMilliseconds = 1000, children }: { text: string; fadeoutMilliseconds?: number; children: Snippet } = $props();
@@ -20,6 +21,9 @@
 <div>
  <button type="button" {onclick}>
   {@render children()}
+  <svg width="24" height="24">
+   <use href={`${assets}/icons.svg#copy_content`}></use>
+  </svg>
  </button>
  <span class="hidden" bind:this={dom}>{resultText}</span>
 </div>

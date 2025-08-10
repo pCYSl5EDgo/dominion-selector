@@ -3,6 +3,7 @@
  import { supplySettings } from "./SupplySettings.svelte";
  import { dominion, ids } from "./dominion.svelte";
  import { globalSettings } from "./globalSettings.svelte";
+ import { assets } from '$app/paths';
  let kingdomIds: number[] = $state([]);
  let landscapeIds: number[] = $state([]);
  let allyIds: number[] = $state([]);
@@ -190,7 +191,7 @@
 
 {#if supplySettings.kingdomCount > 0}
  <CopyButton text={kingdomCopyText}>
-  <span class="font-weight-bold">王国 (クリックしてコピー可)</span>
+  <span class="font-weight-bold">王国</span>
  </CopyButton>
  <ul class="grid2">
   {#each kingdomIds as id}
@@ -205,7 +206,7 @@
 
 {#if supplySettings.normalLandscapeCount > 0}
  <CopyButton text={landscapeCopyText}>
-  <span class="font-weight-bold">ランドスケープ (クリックしてコピー可)</span>
+  <span class="font-weight-bold">ランドスケープ</span>
  </CopyButton>
  <ul class="grid3">
   {#each landscapeIds as id}
@@ -221,7 +222,7 @@
 
 {#if supplySettings.allyCount > 0}
  <CopyButton text={allyCopyText}>
-  <span class="font-weight-bold">同盟 (クリックしてコピー可)</span>
+  <span class="font-weight-bold">同盟</span>
  </CopyButton>
  <ul class="grid1">
   {#each allyIds as id}
@@ -235,7 +236,7 @@
 
 {#if supplySettings.prophecyCount > 0}
  <CopyButton text={prophecyCopyText}>
-  <span class="font-weight-bold">予言 (クリックしてコピー可)</span>
+  <span class="font-weight-bold">予言</span>
  </CopyButton>
  <ul class="grid1">
   {#each prophecyIds as id}
