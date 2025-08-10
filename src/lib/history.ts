@@ -20,6 +20,7 @@ const error = "error";
 const success = "success";
 const readonly = "readonly";
 const readwrite = "readwrite";
+const complete = "complete";
 const bannedItemObjectStoreName = "banned-item";
 
 let privateDbPromise: Promise<IDBDatabase> | null;
@@ -41,7 +42,16 @@ else {
 
 export const db = privateDbPromise == null ? null : await privateDbPromise;
 
-export const getAutoBannedItemAsync = (db: IDBDatabase, abortSignal?: AbortSignal) => {
+const autoSaveIdName = "auto-save-banned-item-id";
+export const getAutoSaveId = () => browser ? Number.parseInt(self.localStorage.getItem(autoSaveIdName) ?? "") : Number.NaN;
+export const saveAutoSaveId = (id: number) => {
+ if (browser) {
+  self.localStorage.setItem(autoSaveIdName, id.toString());
+ }
+}
+
+
+export const getBannedItemAsync = (db: IDBDatabase, id: number, abortSignal?: AbortSignal) => {
  const { promise, resolve, reject } = Promise.withResolvers();
  abortSignal?.addEventListener(abort, reject);
  const transaction = db.transaction(bannedItemObjectStoreName, readonly);
@@ -49,7 +59,7 @@ export const getAutoBannedItemAsync = (db: IDBDatabase, abortSignal?: AbortSigna
  transaction.addEventListener(error, reject);
  const store = transaction.objectStore(bannedItemObjectStoreName);
 
- const request = store.get(-1);
+ const request = store.get(id);
  request.addEventListener(error, reject);
  request.addEventListener(success, function (this: IDBRequest<BannedItem>) {
   resolve(this.result);
@@ -57,13 +67,39 @@ export const getAutoBannedItemAsync = (db: IDBDatabase, abortSignal?: AbortSigna
  return promise as Promise<BannedItem | undefined>;
 };
 
-export const saveAutoBannedItemAsync = (db: IDBDatabase, item: BannedItem, abortSignal?: AbortSignal) => {
+export const saveBannedItemAsync = (db: IDBDatabase, item: BannedItem, abortSignal?: AbortSignal) => {
  const { promise, resolve, reject } = Promise.withResolvers();
  abortSignal?.addEventListener(abort, reject);
  const transaction = db.transaction(bannedItemObjectStoreName, readwrite);
  transaction.addEventListener(abort, reject);
  transaction.addEventListener(error, reject);
- transaction.addEventListener("complete", resolve);
- transaction.objectStore(bannedItemObjectStoreName).put(item, -1).addEventListener(error, reject);
+ transaction.addEventListener(complete, resolve);
+ transaction.objectStore(bannedItemObjectStoreName).put(item).addEventListener(error, reject);
  return promise as Promise<void>;
+}
+
+export const listBannedItemIdNamePairAsync = (db: IDBDatabase, abortSignal?: AbortSignal) => {
+ const { promise, resolve, reject } = Promise.withResolvers();
+ abortSignal?.addEventListener(abort, reject);
+ const transaction = db.transaction(bannedItemObjectStoreName, readonly);
+ transaction.addEventListener(abort, reject);
+ transaction.addEventListener(error, reject);
+ const list: { id: number, name: string }[] = [];
+ transaction.addEventListener(complete, () => resolve(list));
+ const store = transaction.objectStore(bannedItemObjectStoreName);
+ const request = store.openCursor();
+ request.addEventListener(error, reject);
+ request.addEventListener(success, function (this: IDBRequest<IDBCursorWithValue>) {
+  const cursor = this.result;
+  if (cursor) {
+   const value = cursor.value as BannedItem;
+   list.push(value);
+   cursor.continue();
+  }
+ });
+ return promise as Promise<{ id: number, name: string }[]>;
+}
+
+export const deleteBannedItemAsync = (db: IDBDatabase, id: number, abortSignal?: AbortSignal) => {
+
 }

@@ -55,6 +55,7 @@
    display: flex;
    align-items: center;
    justify-content: center;
+   cursor: pointer;
 
    > input {
     display: none;
@@ -99,6 +100,14 @@
    box-shadow: inset 0 0 0 2px lightblue;
    box-sizing: border-box;
    padding: 4px;
+
+   &:hover {
+    cursor: pointer;
+   }
+
+   &:active {
+    background-color: gray;
+   }
   }
 
   summary::marker {

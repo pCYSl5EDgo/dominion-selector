@@ -11,8 +11,8 @@
    if (status === "ban") {
     untrack(() => {
      for (const id of kind.expansions) {
-      for (const pair of dominion.expansions[id].landscapeStatus) {
-       if (pair.kindId === id) {
+      for (const pair of dominion.expansions[id].landscapeStatusPairArray) {
+       if (pair.kindId === kind.id) {
         pair.status = status;
         break;
        }
@@ -29,7 +29,7 @@
     untrack(() => {
      for (const id of kind.expansions) {
       const item = dominion.expansions[id];
-      for (const pair of item.landscapeStatus) {
+      for (const pair of item.landscapeStatusPairArray) {
        if (pair.kindId === kind.id && pair.status !== "ban") {
         pair.status = status;
         break;
@@ -225,25 +225,25 @@
    <ul class="status3">
     {#each kind.expansions as expansionId}
      {@const expansion = dominion.expansions[expansionId]}
-     {@const pair = expansion.landscapeStatus.find((x) => x.kindId === kind.id)}
-     {#if pair && (globalSettings.shouldDisplayBannedItems || pair.status !== "ban")}
-      <li>
-       <ButtonRadioDetails text={expansion.japanese} class={["font-weight-bolder"]} bind:isChecked={pair.status} name="expansion" disabled={kind.landscapeStatus === "ban"}>
-        <ul class="status4">
-         {#each kind.landscapes as landscapeId}
-          {@const landscape = dominion.landscapes[landscapeId]}
-          {#if landscape.expansionId === expansionId && (globalSettings.shouldDisplayBannedItems || landscape.landscapeStatus !== "ban")}
-           <li>
-            <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus} disabled={kind.landscapeStatus === "ban"}>
-             <span class="font-weight-bold">{landscape.japanese}</span>
-            </Radios>
-           </li>
-          {/if}
-         {/each}
-        </ul>
-       </ButtonRadioDetails>
-      </li>
-     {/if}
+     {#each expansion.landscapeStatusPairArray as pair}
+      {#if pair.kindId === kind.id && (globalSettings.shouldDisplayBannedItems || pair.status !== "ban")}
+       <li>
+        <ButtonRadioDetails text={expansion.japanese} class={["font-weight-bolder"]} bind:isChecked={pair.status} name="expansion" disabled={kind.landscapeStatus === "ban"}>
+         <ul class="status4">
+          {#each kind.landscapes as landscapeId}
+           {@const landscape = dominion.landscapes[landscapeId]}
+           {#if landscape.expansionId === expansionId && (globalSettings.shouldDisplayBannedItems || landscape.landscapeStatus !== "ban")}
+            <li>
+             <Radios hasOn={true} bind:isChecked={landscape.landscapeStatus} disabled={kind.landscapeStatus === "ban"}>
+              <span class="font-weight-bold">{landscape.japanese}</span>
+             </Radios>
+            </li>
+           {/if}
+          {/each}
+         </ul>
+        </ButtonRadioDetails>
+       </li>{/if}
+     {/each}
     {/each}
    </ul>
   </ButtonRadioDetails>

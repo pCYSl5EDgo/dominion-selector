@@ -1,3 +1,5 @@
+import { browser } from "$app/environment";
+
 export type SupplySettings = {
  kingdomCount: number;
  normalLandscapeCount: number;
