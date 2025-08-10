@@ -1211,62 +1211,134 @@
   {
    "expansionId": 3,
    "id": 79,
-   "japanese": "薬草商"
+   "japanese": "薬草商",
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 3,
    "id": 80,
-   "japanese": "弟子"
+   "japanese": "弟子",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 3,
    "id": 81,
-   "japanese": "変成"
+   "japanese": "変成",
+   "cost": {
+    "coin": 0,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 8
   },
   {
    "expansionId": 3,
    "id": 82,
-   "japanese": "ブドウ園"
+   "japanese": "ブドウ園",
+   "cost": {
+    "coin": 0,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 2
   },
   {
    "expansionId": 3,
    "id": 83,
-   "japanese": "薬師"
+   "japanese": "薬師",
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 8
   },
   {
    "expansionId": 3,
    "id": 84,
-   "japanese": "大学"
+   "japanese": "大学",
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 8
   },
   {
    "expansionId": 3,
    "id": 85,
-   "japanese": "念視の泉"
+   "japanese": "念視の泉",
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 40
   },
   {
    "expansionId": 3,
    "id": 86,
-   "japanese": "錬金術師"
+   "japanese": "錬金術師",
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 8
   },
   {
    "expansionId": 3,
    "id": 87,
-   "japanese": "使い魔"
+   "japanese": "使い魔",
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 40
   },
   {
    "expansionId": 3,
    "id": 88,
-   "japanese": "賢者の石"
+   "japanese": "賢者の石",
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 1
   },
   {
    "expansionId": 3,
    "id": 89,
-   "japanese": "ゴーレム"
+   "japanese": "ゴーレム",
+   "cost": {
+    "coin": 4,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 8
   },
   {
    "expansionId": 3,
    "id": 90,
-   "japanese": "支配"
+   "japanese": "支配",
+   "cost": {
+    "coin": 6,
+    "debt": 0,
+    "potion": 1
+   },
+   "kinds": 8
   },
   {
    "expansionId": 4,
@@ -1391,72 +1463,156 @@
   {
    "expansionId": 4,
    "id": 115,
-   "japanese": "行商人"
+   "japanese": "行商人",
+   "cost": {
+    "coin": 8,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 116,
-   "japanese": "村落"
+   "japanese": "村落",
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 117,
-   "japanese": "移動動物園"
+   "japanese": "移動動物園",
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 118,
-   "japanese": "店"
+   "japanese": "店",
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 119,
-   "japanese": "再建"
+   "japanese": "再建",
+   "cost": {
+    "coin": 4,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 120,
-   "japanese": "魔女娘"
+   "japanese": "魔女娘",
+   "cost": {
+    "coin": 4,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 121,
-   "japanese": "耕作者"
+   "japanese": "耕作者",
+   "cost": {
+    "coin": 4,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 122,
-   "japanese": "狩猟団"
+   "japanese": "狩猟団",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 123,
-   "japanese": "道化師"
+   "japanese": "道化師",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 40
   },
   {
    "expansionId": 5,
    "id": 124,
-   "japanese": "豊穣の角笛"
+   "japanese": "豊穣の角笛",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 1
   },
   {
    "expansionId": 5,
    "id": 125,
-   "japanese": "謝肉祭"
+   "japanese": "謝肉祭",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 126,
-   "japanese": "渡し守"
+   "japanese": "渡し守",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 127,
-   "japanese": "一騎討ち"
+   "japanese": "一騎討ち",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 5,
    "id": 128,
-   "japanese": "品評会"
+   "japanese": "品評会",
+   "cost": {
+    "coin": 6,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 2
   },
   {
    "expansionId": 6,
@@ -1766,67 +1922,145 @@
   {
    "expansionId": 8,
    "id": 190,
-   "japanese": "蝋燭職人"
+   "japanese": "蝋燭職人",
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 191,
-   "japanese": "装蹄師"
+   "japanese": "装蹄師",
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 192,
-   "japanese": "石工"
+   "japanese": "石工",
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 193,
-   "japanese": "診療所"
+   "japanese": "診療所",
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 194,
-   "japanese": "助言者"
+   "japanese": "助言者",
+   "cost": {
+    "coin": 4,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 195,
-   "japanese": "広場"
+   "japanese": "広場",
+   "cost": {
+    "coin": 4,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 196,
-   "japanese": "伝令官"
+   "japanese": "伝令官",
+   "cost": {
+    "coin": 4,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 197,
-   "japanese": "熟練工"
+   "japanese": "熟練工",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 198,
-   "japanese": "商人ギルド"
+   "japanese": "商人ギルド",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 199,
-   "japanese": "肉屋"
+   "japanese": "肉屋",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 200,
-   "japanese": "パン屋"
+   "japanese": "パン屋",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 8,
    "id": 201,
-   "japanese": "予言者"
+   "japanese": "予言者",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 40
   },
   {
    "expansionId": 8,
    "id": 202,
-   "japanese": "野盗"
+   "japanese": "野盗",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 40
   },
   {
    "expansionId": 9,
@@ -2051,7 +2285,13 @@
   {
    "expansionId": 10,
    "id": 247,
-   "japanese": "技術者"
+   "japanese": "技術者",
+   "cost": {
+    "coin": 0,
+    "debt": 4,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 10,
@@ -2096,7 +2336,13 @@
   {
    "expansionId": 10,
    "id": 256,
-   "japanese": "城"
+   "japanese": "城",
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 2
   },
   {
    "expansionId": 11,
@@ -2521,22 +2767,46 @@
   {
    "expansionId": 13,
    "id": 341,
-   "japanese": "漁師"
+   "japanese": "漁師",
+   "cost": {
+    "coin": 5,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 13,
    "id": 342,
-   "japanese": "デストリエ"
+   "japanese": "デストリエ",
+   "cost": {
+    "coin": 6,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 13,
    "id": 343,
-   "japanese": "行人"
+   "japanese": "行人",
+   "cost": {
+    "coin": 6,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 13,
    "id": 344,
-   "japanese": "動物見本市"
+   "japanese": "動物見本市",
+   "cost": {
+    "coin": 7,
+    "debt": 0,
+    "potion": 0
+   },
+   "kinds": 8
   },
   {
    "expansionId": 14,
@@ -4439,6 +4709,188 @@
    "id": 191,
    "japanese": "病",
    "kindId": 6
+  }
+ ],
+ "cardKinds": [
+  {
+   "id": 0,
+   "english": "treasure",
+   "japanese": "財宝"
+  },
+  {
+   "id": 1,
+   "english": "victory",
+   "japanese": "勝利点"
+  },
+  {
+   "id": 2,
+   "english": "curse",
+   "japanese": "呪い"
+  },
+  {
+   "id": 3,
+   "english": "action",
+   "japanese": "アクション"
+  },
+  {
+   "id": 4,
+   "english": "reaction",
+   "japanese": "リアクション"
+  },
+  {
+   "id": 5,
+   "english": "attack",
+   "japanese": "アタック"
+  },
+  {
+   "id": 6,
+   "english": "duration",
+   "japanese": "持続"
+  },
+  {
+   "id": 7,
+   "english": "prize",
+   "japanese": "褒章"
+  },
+  {
+   "id": 8,
+   "english": "reward",
+   "japanese": "恩賞"
+  },
+  {
+   "id": 9,
+   "english": "shelter",
+   "japanese": "避難所"
+  },
+  {
+   "id": 10,
+   "english": "ruins",
+   "japanese": "廃墟"
+  },
+  {
+   "id": 11,
+   "english": "looter",
+   "japanese": "略奪者"
+  },
+  {
+   "id": 12,
+   "english": "command",
+   "japanese": "命令"
+  },
+  {
+   "id": 13,
+   "english": "knight",
+   "japanese": "騎士"
+  },
+  {
+   "id": 14,
+   "english": "reserve",
+   "japanese": "リザーブ"
+  },
+  {
+   "id": 15,
+   "english": "traveller",
+   "japanese": "トラベラー"
+  },
+  {
+   "id": 16,
+   "english": "gathering",
+   "japanese": "集合"
+  },
+  {
+   "id": 17,
+   "english": "castle",
+   "japanese": "城"
+  },
+  {
+   "id": 18,
+   "english": "fate",
+   "japanese": "幸運"
+  },
+  {
+   "id": 19,
+   "english": "night",
+   "japanese": "夜行"
+  },
+  {
+   "id": 20,
+   "english": "doom",
+   "japanese": "不運"
+  },
+  {
+   "id": 21,
+   "english": "spirit",
+   "japanese": "精霊"
+  },
+  {
+   "id": 22,
+   "english": "zombie",
+   "japanese": "ゾンビ"
+  },
+  {
+   "id": 23,
+   "english": "heirloom",
+   "japanese": "家宝"
+  },
+  {
+   "id": 24,
+   "english": "gift",
+   "japanese": "祝福"
+  },
+  {
+   "id": 25,
+   "english": "omens",
+   "japanese": "呪詛"
+  },
+  {
+   "id": 26,
+   "english": "liaison",
+   "japanese": "連携"
+  },
+  {
+   "id": 27,
+   "english": "townsfolk",
+   "japanese": "町民"
+  },
+  {
+   "id": 28,
+   "english": "augur",
+   "japanese": "卜占官"
+  },
+  {
+   "id": 29,
+   "english": "odyssey",
+   "japanese": "叙事詩"
+  },
+  {
+   "id": 30,
+   "english": "fort",
+   "japanese": "城塞"
+  },
+  {
+   "id": 31,
+   "english": "clash",
+   "japanese": "衝突"
+  },
+  {
+   "id": 32,
+   "english": "wizard",
+   "japanese": "魔法使い"
+  },
+  {
+   "id": 33,
+   "english": "loot",
+   "japanese": "戦利品"
+  },
+  {
+   "id": 34,
+   "english": "shadow",
+   "japanese": "影"
+  },
+  {
+   "id": 35,
+   "english": "omen",
+   "japanese": "前兆"
   }
  ]
 }
