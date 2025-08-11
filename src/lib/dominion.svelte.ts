@@ -79,6 +79,13 @@ export const initializeWithBannedItemAsync = async (db: IDBDatabase, id: number,
       pair.status = ban;
      }
     }
+
+    for (const landscapeId of dominion.landscapeKinds[kindId].landscapes) {
+     const landscape = dominion.landscapes[landscapeId];
+     if (landscape.expansionId === expansionId) {
+      landscape.landscapeStatus = ban;
+     }
+    }
    }
 
    for (const landscapeId of bannedItem.landscapes.ids) {
