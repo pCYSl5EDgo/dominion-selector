@@ -146,6 +146,6 @@
  }
 
  .ruins {
-  background-color: "#c99";
+  background-color: #c99;
  }
 </style>
