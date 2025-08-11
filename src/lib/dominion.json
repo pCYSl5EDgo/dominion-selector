@@ -1744,14 +1744,12 @@
    "kinds": 72
   },
   {
-   "cost": null,
    "expansionId": 2,
    "id": 68,
    "japanese": "封鎖",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 2,
    "id": 69,
    "japanese": "島",
@@ -1824,21 +1822,18 @@
    "kinds": 72
   },
   {
-   "cost": null,
    "expansionId": 2,
    "id": 76,
    "japanese": "海の魔女",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 2,
    "id": 77,
    "japanese": "コルセア",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 2,
    "id": 78,
    "japanese": "海賊",
@@ -2032,7 +2027,6 @@
    "kinds": 8
   },
   {
-   "cost": null,
    "expansionId": 4,
    "id": 96,
    "japanese": "書記",
@@ -2402,7 +2396,6 @@
    "kinds": 8
   },
   {
-   "cost": null,
    "expansionId": 6,
    "id": 130,
    "japanese": "愚者の黄金",
@@ -2442,7 +2435,6 @@
    "kinds": 8
   },
   {
-   "cost": null,
    "expansionId": 6,
    "id": 134,
    "japanese": "坑道",
@@ -2526,7 +2518,6 @@
    "kinds": 8
   },
   {
-   "cost": null,
    "expansionId": 6,
    "id": 142,
    "japanese": "大釜",
@@ -3215,7 +3206,6 @@
    "kinds": 16392
   },
   {
-   "cost": null,
    "expansionId": 9,
    "id": 205,
    "japanese": "法貨",
@@ -3255,7 +3245,6 @@
    "kinds": 72
   },
   {
-   "cost": null,
    "expansionId": 9,
    "id": 209,
    "japanese": "隊商の護衛",
@@ -3394,21 +3383,18 @@
    "kinds": 40
   },
   {
-   "cost": null,
    "expansionId": 9,
    "id": 222,
    "japanese": "沼の妖婆",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 9,
    "id": 223,
    "japanese": "呪いの森",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 9,
    "id": 224,
    "japanese": "橋の下のトロル",
@@ -3437,7 +3423,6 @@
    "kinds": 16392
   },
   {
-   "cost": null,
    "expansionId": 9,
    "id": 227,
    "japanese": "遠隔地",
@@ -3455,7 +3440,6 @@
    "kinds": 1
   },
   {
-   "cost": null,
    "expansionId": 9,
    "id": 229,
    "japanese": "遺物",
@@ -3517,7 +3501,6 @@
    "kinds": 65544
   },
   {
-   "cost": null,
    "expansionId": 10,
    "id": 235,
    "japanese": "女魔術師",
@@ -3634,7 +3617,6 @@
    "kinds": 1
   },
   {
-   "cost": null,
    "expansionId": 10,
    "id": 246,
    "japanese": "冠",
@@ -3795,7 +3777,6 @@
    "kinds": 524288
   },
   {
-   "cost": null,
    "expansionId": 11,
    "id": 261,
    "japanese": "守護者",
@@ -3868,7 +3849,6 @@
    "kinds": 524288
   },
   {
-   "cost": null,
    "expansionId": 11,
    "id": 268,
    "japanese": "ゴーストタウン",
@@ -4029,49 +4009,42 @@
    "kinds": 8
   },
   {
-   "cost": null,
    "expansionId": 11,
    "id": 283,
    "japanese": "人狼",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 11,
    "id": 284,
    "japanese": "吸血鬼",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 11,
    "id": 285,
    "japanese": "納骨堂",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 11,
    "id": 286,
    "japanese": "悪人のアジト",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 11,
    "id": 287,
    "japanese": "カブラー",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 11,
    "id": 288,
    "japanese": "偶像",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 11,
    "id": 289,
    "japanese": "夜襲",
@@ -4364,7 +4337,6 @@
    "kinds": 24
   },
   {
-   "cost": null,
    "expansionId": 13,
    "id": 316,
    "japanese": "黒猫",
@@ -4503,7 +4475,6 @@
    "kinds": 40
   },
   {
-   "cost": null,
    "expansionId": 13,
    "id": 329,
    "japanese": "村有緑地",
@@ -4609,7 +4580,6 @@
    "kinds": 72
   },
   {
-   "cost": null,
    "expansionId": 13,
    "id": 339,
    "japanese": "門番",
@@ -4913,14 +4883,12 @@
    "kinds": 40
   },
   {
-   "cost": null,
    "expansionId": 14,
    "id": 367,
    "japanese": "追いはぎ",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 14,
    "id": 368,
    "japanese": "契約書",
@@ -4938,46 +4906,70 @@
    "kinds": 8
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 2,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 14,
    "id": 370,
    "japanese": "町民",
-   "kinds": 0
+   "kinds": 134217736
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 14,
    "id": 371,
    "japanese": "卜占官",
-   "kinds": 0
+   "kinds": 268435464
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 14,
    "id": 372,
    "japanese": "叙事詩",
-   "kinds": 0
+   "kinds": 536870920
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 14,
    "id": 373,
    "japanese": "城砦",
-   "kinds": 0
+   "kinds": 1073741832
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 14,
    "id": 374,
    "japanese": "衝突",
-   "kinds": 0
+   "kinds": 2147483656
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 14,
    "id": 375,
    "japanese": "魔法使い",
-   "kinds": 0
+   "kinds": 4294967304
   },
   {
    "cost": {
@@ -5024,7 +5016,6 @@
    "kinds": 1
   },
   {
-   "cost": null,
    "expansionId": 15,
    "id": 380,
    "japanese": "檻",
@@ -5053,14 +5044,12 @@
    "kinds": 72
   },
   {
-   "cost": null,
    "expansionId": 15,
    "id": 383,
    "japanese": "セイレーン",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 15,
    "id": 384,
    "japanese": "密航者",
@@ -5177,21 +5166,18 @@
    "kinds": 1
   },
   {
-   "cost": null,
    "expansionId": 15,
    "id": 395,
    "japanese": "豊穣",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 15,
    "id": 396,
    "japanese": "ゴンドラ",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 15,
    "id": 397,
    "japanese": "縄",
@@ -5297,14 +5283,12 @@
    "kinds": 72
   },
   {
-   "cost": null,
    "expansionId": 15,
    "id": 407,
    "japanese": "切り裂き魔",
    "kinds": 0
   },
   {
-   "cost": null,
    "expansionId": 15,
    "id": 408,
    "japanese": "フリゲート船",
@@ -5355,7 +5339,6 @@
    "kinds": 1
   },
   {
-   "cost": null,
    "expansionId": 15,
    "id": 413,
    "japanese": "埋められた財宝",
@@ -5604,7 +5587,6 @@
    "kinds": 34359738408
   },
   {
-   "cost": null,
    "expansionId": 16,
    "id": 436,
    "japanese": "侍",
