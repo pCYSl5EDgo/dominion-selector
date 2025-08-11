@@ -77,7 +77,7 @@
     {#if globalSettings.shouldDisplayBannedItems || kingdom.kingdomStatus !== "ban"}
      <li>
       <Radios hasOn={true} bind:isChecked={kingdom.kingdomStatus} disabled={expansion.kingdomStatus === "ban"}>
-       <span class="font-weight-bold">{kingdom.japanese}</span>
+       <span class="font-weight-bold {kingdom.kinds}">{kingdom.japanese}</span>
       </Radios>
      </li>
     {/if}
@@ -115,5 +115,37 @@
     }
    }
   }
+ }
+
+ .treasure {
+  background-color: #ff9;
+ }
+
+ .victory {
+  background-color: #9f9;
+ }
+
+ .curse {
+  background-color: #c9f;
+ }
+
+ .reaction {
+  background-color: #99f;
+ }
+
+ .attack {
+  background-color: #f99;
+ }
+
+ .duration {
+  background-color: #fc9;
+ }
+
+ .shelter {
+  background-color: #fcf;
+ }
+
+ .ruins {
+  background-color: "#c99";
  }
 </style>

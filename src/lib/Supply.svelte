@@ -197,7 +197,7 @@
    {@const item = dominion.kingdoms[id]}
    <li class={item.kingdomStatus}>
     <span>{dominion.expansions[item.expansionId].japanese}</span>
-    <span>{item.japanese}</span>
+    <span class={item.kinds}>{item.japanese}</span>
    </li>
   {/each}
  </ul>

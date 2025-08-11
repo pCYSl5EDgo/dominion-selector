@@ -12,8 +12,9 @@ export type LandscapeKind = (typeof d.landscapeKinds)[0] & {
 export type Landscape = (typeof d.landscapes)[0] & {
  landscapeStatus: RadioStatus4;
 };
-export type Kingdom = (typeof d.kingdoms)[0] & {
+export type Kingdom = Omit<(typeof d.kingdoms)[0], "kinds"> & {
  kingdomStatus: RadioStatus4;
+ kinds: string[];
 }
 
 export type CardKind = (typeof d.cardKinds)[0];
@@ -31,9 +32,15 @@ export type Dominion = {
 
 export const dominion = $state(d as any as Dominion);
 
-export const calculateCardKindCssClasses = (kind: number) => {
- for (const cardKind of dominion.cardKinds) {
-  
+for (const kingdom of dominion.kingdoms) {
+ const temp = kingdom.kinds as any;
+ if (typeof temp === "number") {
+  kingdom.kinds = [];
+  for (const cardKind of dominion.cardKinds) {
+   if (temp & (1 << cardKind.id)) {
+    kingdom.kinds.push(cardKind.english);
+   }
+  }
  }
 }
 
