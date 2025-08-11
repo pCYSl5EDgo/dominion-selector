@@ -1447,11 +1447,15 @@
    "kinds": 24
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 4,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 1,
    "id": 41,
    "japanese": "風車",
-   "kinds": 0
+   "kinds": 10
   },
   {
    "cost": {
@@ -1542,18 +1546,26 @@
    "kinds": 2
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 6,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 1,
    "id": 50,
    "japanese": "貴族",
-   "kinds": 0
+   "kinds": 10
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 6,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 1,
    "id": 51,
    "japanese": "ハーレム",
-   "kinds": 0
+   "kinds": 3
   },
   {
    "cost": {
@@ -1655,11 +1667,15 @@
    "kinds": 72
   },
   {
-   "cost": null,
+   "cost": {
+    "coin": 3,
+    "debt": 0,
+    "potion": 0
+   },
    "expansionId": 2,
    "id": 61,
    "japanese": "アストロラーベ",
-   "kinds": 0
+   "kinds": 65
   },
   {
    "cost": {
