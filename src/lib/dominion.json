@@ -1,16 +1,19 @@
 {
  "cardKinds": [
   {
+   "color": "#FF9",
    "english": "treasure",
    "id": 0,
    "japanese": "財宝"
   },
   {
+   "color": "#9F9",
    "english": "victory",
    "id": 1,
    "japanese": "勝利点"
   },
   {
+   "color": "#C9F",
    "english": "curse",
    "id": 2,
    "japanese": "呪い"
@@ -21,16 +24,19 @@
    "japanese": "アクション"
   },
   {
+   "color": "#99F",
    "english": "reaction",
    "id": 4,
    "japanese": "リアクション"
   },
   {
+   "color": "#F99",
    "english": "attack",
    "id": 5,
    "japanese": "アタック"
   },
   {
+   "color": "#FC9",
    "english": "duration",
    "id": 6,
    "japanese": "持続"
@@ -46,11 +52,13 @@
    "japanese": "恩賞"
   },
   {
+   "color": "#FCF",
    "english": "shelter",
    "id": 9,
    "japanese": "避難所"
   },
   {
+   "color": "#C99",
    "english": "ruins",
    "id": 10,
    "japanese": "廃墟"
@@ -71,6 +79,7 @@
    "japanese": "騎士"
   },
   {
+   "color": "#aa0",
    "english": "reserve",
    "id": 14,
    "japanese": "リザーブ"
@@ -96,6 +105,7 @@
    "japanese": "幸運"
   },
   {
+   "color": "#333",
    "english": "night",
    "id": 19,
    "japanese": "夜行"

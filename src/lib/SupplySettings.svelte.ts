@@ -1,11 +1,18 @@
 import { browser } from "$app/environment";
 
+export type SelectionStatus = "off" | "random" | "on";
+
 export type SupplySettings = {
  kingdomCount: number;
  normalLandscapeCount: number;
  wayMaxCount: number;
  allyCount: number;
  prophecyCount: number;
+ attackSelectionStatus: SelectionStatus;
+ plusActionSelectionStats: SelectionStatus;
+ plusPurchaseSelectionStatus: SelectionStatus;
+ compressSelectionStatus: SelectionStatus;
+ distributeCurseSelectionStatus: SelectionStatus;
 };
 
 export const supplySettings: SupplySettings = $state({
@@ -14,4 +21,9 @@ export const supplySettings: SupplySettings = $state({
  wayMaxCount: 1,
  allyCount: 1,
  prophecyCount: 1,
+ attackSelectionStatus: "random",
+ plusActionSelectionStats: "random",
+ plusPurchaseSelectionStatus: "random",
+ compressSelectionStatus: "random",
+ distributeCurseSelectionStatus: "random"
 });

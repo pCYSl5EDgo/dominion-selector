@@ -10,11 +10,13 @@
  import { globalSettings } from "./globalSettings.svelte";
 
  let {
+  hasBan = true,
   hasOn = false,
   isChecked = $bindable("random"),
   disabled = false,
   children = undefined,
  }: {
+  hasBan?: boolean;
   hasOn?: boolean;
   isChecked: RadioStatus4;
   disabled?: boolean;
@@ -39,8 +41,10 @@
   <input type="radio" value="off" bind:group={isChecked} {name} {disabled} />
   <span>オフ</span>
  </label>
- <label>
-  <input type="radio" value="ban" bind:group={isChecked} {name} {disabled} />
-  <span>禁止</span>
- </label>
+ {#if hasBan}
+  <label>
+   <input type="radio" value="ban" bind:group={isChecked} {name} {disabled} />
+   <span>禁止</span>
+  </label>
+ {/if}
 {/if}

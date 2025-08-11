@@ -54,12 +54,20 @@
  });
 </script>
 
-<div>
- <label>
-  <span>王国選出枚数</span>
-  <input id="supply-kingdom-count" type="number" min={kingdomSelectionCountMinMax.min} max={kingdomSelectionCountMinMax.max} step="1" bind:value={supplySettings.kingdomCount} />
- </label>
-</div>
+<details>
+ <summary>選出詳細条件</summary>
+ <div>
+  <label>
+   <span>王国選出枚数</span>
+   <input id="supply-kingdom-count" type="number" min={kingdomSelectionCountMinMax.min} max={kingdomSelectionCountMinMax.max} step="1" bind:value={supplySettings.kingdomCount} />
+  </label>
+  <Radios bind:isChecked={supplySettings.attackSelectionStatus} hasOn={true} hasBan={false}><span>アタックカード</span></Radios>
+  <Radios bind:isChecked={supplySettings.plusActionSelectionStats} hasOn={true} hasBan={false}><span>＋アクション</span></Radios>
+  <Radios bind:isChecked={supplySettings.plusPurchaseSelectionStatus} hasOn={true} hasBan={false}><span>＋購入</span></Radios>
+  <Radios bind:isChecked={supplySettings.compressSelectionStatus} hasOn={true} hasBan={false}><span>圧縮</span></Radios>
+  <Radios bind:isChecked={supplySettings.distributeCurseSelectionStatus} hasOn={true} hasBan={false}><span>呪い撒き</span></Radios>
+ </div>
+</details>
 
 {#each dominion.expansions as expansion}
  <ButtonRadioDetails text={expansion.japanese} class={["font-weight-bolder"]} bind:isChecked={expansion.kingdomStatus} name="expansion">
@@ -83,19 +91,29 @@
   grid-template-columns: auto repeat(4, 1fr);
  }
 
- div {
+ details {
   grid-column: 1/-1;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 0.5em;
-  row-gap: 0.4lh;
 
-  > label {
+  summary::marker {
+   content: unset;
+  }
+
+  > div {
+   width: stretch;
    display: grid;
-   grid-template-columns: subgrid;
    grid-column: 1/-1;
-   column-gap: 0.5em;
+   grid-template-columns: auto repeat(3, 1fr);
    row-gap: 0.4lh;
+   column-gap: 1ex;
+   > label:has(input[type="number"]) {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    > input {
+     grid-column: 2/-1;
+    }
+   }
   }
  }
 </style>

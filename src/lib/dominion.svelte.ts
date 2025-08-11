@@ -15,14 +15,27 @@ export type Landscape = (typeof d.landscapes)[0] & {
 export type Kingdom = (typeof d.kingdoms)[0] & {
  kingdomStatus: RadioStatus4;
 }
+
+export type CardKind = (typeof d.cardKinds)[0];
+
+export type SpecialCardKind = (typeof d.specialCardKinds)[0];
+
 export type Dominion = {
+ cardKinds: CardKind[];
  expansions: Expansion[];
  landscapeKinds: LandscapeKind[];
  landscapes: Landscape[];
  kingdoms: Kingdom[];
+ specialCardKinds: SpecialCardKind[];
 };
 
 export const dominion = $state(d as any as Dominion);
+
+export const calculateCardKindCssClasses = (kind: number) => {
+ for (const cardKind of dominion.cardKinds) {
+  
+ }
+}
 
 export const initializeWithRandom = () => {
  const random = "random";
@@ -105,6 +118,12 @@ export const ids = {
   trait: 5,
   prophecy: 6
  },
+ specialCardKinds: {
+  action: 0,
+  purchase: 1,
+  compress: 2,
+  curse: 3
+ }
 };
 
 export const saveBannedItemAsync = async (id: number, name?: string) => {

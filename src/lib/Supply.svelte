@@ -3,7 +3,6 @@
  import { supplySettings } from "./SupplySettings.svelte";
  import { dominion, ids } from "./dominion.svelte";
  import { globalSettings } from "./globalSettings.svelte";
- import { assets } from '$app/paths';
  let kingdomIds: number[] = $state([]);
  let landscapeIds: number[] = $state([]);
  let allyIds: number[] = $state([]);

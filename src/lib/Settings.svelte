@@ -198,6 +198,7 @@
       > input {
        font-size: large;
        padding-inline: 1ex;
+       padding-block: 0.5ex;
       }
      }
     }
@@ -218,8 +219,30 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 1ex;
+  row-gap: 0.4lh;
   > h2 {
    grid-column: 1/-1;
+  }
+
+  > input[type="text"] {
+   grid-column: 1/-1;
+   padding-inline: 1ex;
+   padding-block: 0.5ex;
+   font-size: large;
+  }
+ }
+
+ @media (width <= 400px) {
+  #settings-banned-item-list {
+   grid-template-columns: repeat(3, 1fr);
+
+   input[type="text"] {
+    grid-column: 1/-1;
+   }
+  }
+
+  #settings-copy-separator {
+   grid-template-columns: repeat(2, 1fr);
   }
  }
 </style>

@@ -109,8 +109,12 @@
    }
   }
 
-  summary::marker {
-   content: "";
+  summary {
+   cursor: pointer;
+
+   &::marker {
+    content: "";
+   }
   }
 
   .font-weight-bolder {
