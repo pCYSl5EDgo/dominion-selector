@@ -77,7 +77,7 @@
     {#if globalSettings.shouldDisplayBannedItems || kingdom.kingdomStatus !== "ban"}
      <li>
       <Radios hasOn={true} bind:isChecked={kingdom.kingdomStatus} disabled={expansion.kingdomStatus === "ban"}>
-       <span class="font-weight-bold {kingdom.kinds}">{kingdom.japanese}</span>
+       <span class={kingdom.kinds.concat("card", "font-weight-bold")} >{kingdom.japanese}</span>
       </Radios>
      </li>
     {/if}
@@ -147,5 +147,13 @@
 
  .ruins {
   background-color: #c99;
+ }
+
+ .card {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.5ex;
+  text-align: center;
  }
 </style>
