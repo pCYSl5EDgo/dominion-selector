@@ -1,4 +1,5 @@
 <script lang="ts">
+ import Card from "./Card.svelte";
  import CopyButton from "./CopyButton.svelte";
  import { supplySettings } from "./SupplySettings.svelte";
  import { dominion, ids } from "./dominion.svelte";
@@ -192,15 +193,15 @@
  <CopyButton text={kingdomCopyText}>
   <span class="font-weight-bold">王国</span>
  </CopyButton>
- <ul class="grid2">
+ <div class="grid2">
   {#each kingdomIds as id}
    {@const item = dominion.kingdoms[id]}
-   <li class={item.kingdomStatus}>
+   <Card {id} classes={[item.kingdomStatus]}>
     <span>{dominion.expansions[item.expansionId].japanese}</span>
     <span class={item.kinds}>{item.japanese}</span>
-   </li>
+   </Card>
   {/each}
- </ul>
+ </div>
 {/if}
 
 {#if supplySettings.normalLandscapeCount > 0}
@@ -254,48 +255,50 @@
   gap: 0.3lh;
  }
 
- ul:is(.grid1, .grid2, .grid3) {
-  width: stretch;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(8ic, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(min-content, max-content));
-
-  > li {
-   grid-template-rows: subgrid;
-   display: grid;
-   padding: 4px;
+ :global {
+  :is(.grid1, .grid2, .grid3) {
    width: stretch;
    box-sizing: border-box;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(8ic, 1fr));
+   grid-template-rows: repeat(auto-fill, minmax(min-content, max-content));
 
-   span {
-    display: inline-block;
+   > :is(li, div) {
+    grid-template-rows: subgrid;
+    display: grid;
+    padding: 0;
+    width: stretch;
     box-sizing: border-box;
-   }
 
-   &.on {
-    box-shadow: inset 0 0 0 3px orange;
-   }
+    span {
+     display: inline-block;
+     box-sizing: border-box;
+    }
 
-   &.random {
-    box-shadow: inset 0 0 0 2px grey;
+    &.on {
+     box-shadow: inset 0 0 0 3px orange;
+    }
+
+    &.random {
+     box-shadow: inset 0 0 0 2px grey;
+    }
    }
   }
- }
 
- ul:empty {
-  display: none;
- }
+  ul:empty {
+   display: none;
+  }
 
- .grid2 > li {
-  grid-column: span 1;
-  grid-row: span 2;
-  grid-template-rows: repeat(2, auto);
- }
+  .grid2 > div {
+   grid-column: span 1;
+   grid-row: span 2;
+   grid-template-rows: repeat(2, auto);
+  }
 
- .grid3 > li {
-  grid-column: span 1;
-  grid-row: span 3;
-  grid-template-rows: repeat(3, auto);
+  .grid3 > li {
+   grid-column: span 1;
+   grid-row: span 3;
+   grid-template-rows: repeat(3, auto);
+  }
  }
 </style>

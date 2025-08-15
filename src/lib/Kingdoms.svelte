@@ -5,6 +5,7 @@
  import { untrack } from "svelte";
  import { supplySettings } from "./SupplySettings.svelte";
  import { globalSettings } from "./globalSettings.svelte";
+ import Card from "./Card.svelte";
 
  $effect(() => {
   for (const expansion of dominion.expansions) {
@@ -77,7 +78,7 @@
     {#if globalSettings.shouldDisplayBannedItems || kingdom.kingdomStatus !== "ban"}
      <li>
       <Radios hasOn={true} bind:isChecked={kingdom.kingdomStatus} disabled={expansion.kingdomStatus === "ban"}>
-       <span class={kingdom.kinds.concat("card", "font-weight-bold")} >{kingdom.japanese}</span>
+       <Card id={kingdomId} classes={["font-weight-bold"]}>{kingdom.japanese}</Card>
       </Radios>
      </li>
     {/if}
@@ -115,45 +116,5 @@
     }
    }
   }
- }
-
- .treasure {
-  background-color: #ff9;
- }
-
- .victory {
-  background-color: #9f9;
- }
-
- .curse {
-  background-color: #c9f;
- }
-
- .reaction {
-  background-color: #99f;
- }
-
- .attack {
-  background-color: #f99;
- }
-
- .duration {
-  background-color: #fc9;
- }
-
- .shelter {
-  background-color: #fcf;
- }
-
- .ruins {
-  background-color: #c99;
- }
-
- .card {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  padding-inline: 0.5ex;
-  text-align: center;
  }
 </style>
